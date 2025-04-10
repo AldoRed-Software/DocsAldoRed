@@ -29,15 +29,21 @@ Considere el siguiente esquema relacional que caaptura alumnos, cursos, y la tom
 
 1. **Seleccionar el curso "Topología":**  
    Se filtra la relación **cursos** para obtener solo el curso llamado "Topología".  
-   $$ C = \sigma\_{nombre = "Topología"}(cursos) $$
+   $ C = \sigma\_{nombre = "Topologia"}(cursos) $
 
 2. **Unir con la relación de toma:**  
-   Se une la relación resultante con **toma** utilizando la condición que relaciona el código del curso:  
-   $$ T = toma \ \bowtie\_{codigo_curso = codigo} \ C $$
+   Se une la relación resultante con **toma** utilizando la condición que relaciona el código del curso:
+
+   $$
+   T = toma \ \bowtie\_{codigo\\\_curso = codigo} \ C
+   $$
 
 3. **Unir con la relación de alumnos:**  
-   Se une el resultado con la relación **alumnos** utilizando la condición que relaciona el rut del alumno:  
-   $$ A = alumnos \ \bowtie\_{rut = rut_alumno} \ T $$
+   Se une el resultado con la relación **alumnos** utilizando la condición que relaciona el rut del alumno:
+
+   $$
+    A = alumnos \ \bowtie\_{rut = rut_alumno} \ T
+   $$
 
 4. **Proyectar nombre y edad:**  
    Finalmente, se extraen únicamente los atributos **nombre** y **edad**:  
@@ -46,26 +52,24 @@ Considere el siguiente esquema relacional que caaptura alumnos, cursos, y la tom
 **Consulta completa:**
 
 $$
-\pi_{nombre, edad} \Bigl( alumnos \ \bowtie_{rut = rut\_alumno} \Bigl( toma \ \bowtie_{codigo\_curso = codigo} \bigl( \sigma_{nombre = "Topología"}(cursos) \bigr) \Bigr) \Bigr)
+\pi\_{nombre, edad} \Bigl( alumnos \bowtie*{rut = rut_alumno} \Bigl( toma \bowtie*{codigo_curso = codigo} ( \sigma\*{nombre = "Topologia"} (cursos) ) \Bigr) \Bigr)
 $$
 
 ### Pregunta 2
 
-1. **Obtener el conjunto de códigos de cursos de "Informática":**  
+1. **Obtener el conjunto de códigos de cursos de "Informática":**
    Se filtra la relación **cursos** para obtener únicamente los cursos de la carrera "Informática" y se proyecta el código.
 
-   $$
-   C = \pi_{codigo} \bigl( \sigma_{carrera = "Informática"}(cursos) \bigr)
-   $$
+   $$ C = \pi*{codigo} \bigl( \sigma*{carrera = "Informatica"}(cursos) \bigr) $$
 
-2. **Obtener las inscripciones de alumnos en cursos de "Informática":**  
+2. **Obtener las inscripciones de alumnos en cursos de "Informática":**
    Se unen **toma** y **cursos** filtrados por "Informática", para obtener la relación de alumnos y los cursos de esa carrera.
 
    $$
-   T = \pi_{rut\_alumno, codigo\_curso} \bigl( toma \ \bowtie_{codigo\_curso = codigo} \ \sigma_{carrera = "Informática"}(cursos) \bigr)
+   T = \pi_{rut\_alumno, codigo\_curso} \bigl( toma \ \bowtie_{codigo\_curso = codigo} \ \sigma_{carrera = "Informatica"}(cursos) \bigr)
    $$
 
-3. **Aplicar el operador de división:**  
+3. **Aplicar el operador de división:**
    Se seleccionan aquellos alumnos que han tomado todos los cursos de "Informática" realizando la división de la relación anterior por el conjunto de cursos:
 
    $$
@@ -74,7 +78,7 @@ $$
 
    En donde $R$ contendrá el atributo `rut_alumno` de aquellos alumnos que están inscritos en _todos_ los cursos de "Informática".
 
-4. **Obtener el nombre de los alumnos:**  
+4. **Obtener el nombre de los alumnos:**
    Se unen la relación resultante con **alumnos** para proyectar únicamente el nombre.
    $$
    \pi_{nombre}\bigl( alumnos \ \bowtie_{rut = rut\_alumno} \ R \bigr)
@@ -85,23 +89,23 @@ $$
 $$
 \pi_{nombre}\Bigl(
 \; alumnos \ \bowtie_{rut = rut\_alumno} \Bigl(
-\; \pi_{rut\_alumno, codigo\_curso}\bigl( toma \ \bowtie_{codigo\_curso = codigo} \ \sigma_{carrera = "Informática"}(cursos) \bigr)
-\; \div \; \pi_{codigo}\bigl( \sigma_{carrera = "Informática"}(cursos) \bigr)
+\; \pi_{rut\_alumno, codigo\_curso}\bigl( toma \ \bowtie_{codigo\_curso = codigo} \ \sigma_{carrera = "Informatica"}(cursos) \bigr)
+\; \div \; \pi_{codigo}\bigl( \sigma_{carrera = "Informatica"}(cursos) \bigr)
 \Bigr)
 \Bigr)
 $$
 
 ### Pregunta 3
 
-**(a) Verdadero.**  
-Aplicar la selección con la misma condición dos veces es redundante, ya que:  
-$$\sigma_{C}(\sigma_{C}(E)) = \sigma_{C \land C}(E)$$  
+**(a) Verdadero.**
+Aplicar la selección con la misma condición dos veces es redundante, ya que:
+$$\sigma_{C}(\sigma_{C}(E)) = \sigma_{C \land C}(E)$$
 Y, puesto que \(C \land C\) es lógicamente equivalente a \(C\), ambas expresiones son iguales.
 
 ---
 
-**(b) Verdadero.**  
-La operación de proyección es idempotente, lo que significa que aplicar la misma proyección repetidamente no altera el resultado:  
+**(b) Verdadero.**
+La operación de proyección es idempotente, lo que significa que aplicar la misma proyección repetidamente no altera el resultado:
 $$\pi_{A}(\pi_{A}(E)) = \pi_{A}(E)$$
 
 ---
@@ -122,3 +126,7 @@ $$
 donde \(C1\) afecta únicamente a \(E1\) y \(C2\) únicamente a \(E2\).
 
 Debido a que en la aserción original \(C2\) no está definido, la equivalencia no se cumple. Por ello, la aserción es falsa.
+
+```
+
+```
