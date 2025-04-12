@@ -833,3 +833,6 @@ flowchart TB
 Aplicar la solución "razonable" dependiendo del caso particular
 
 :::
+
+:::tip CONSEJO
+Revisa el glosario de esta clase [Glosario Modelo Entidad-Relación](./glosary#clase-2---modelo-entidad-relación)

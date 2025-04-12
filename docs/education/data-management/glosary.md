@@ -163,3 +163,160 @@ Se menciona la importancia de SQL en el contexto de Data Science y cómo surgió
 
   **Contexto en la clase:**  
   Se resalta que estas funciones son responsabilidades del DBMS, lo cual alivia al usuario de tener que implementarlas manualmente.
+
+---
+
+## Clase 2 - [Modelo Entidad-Relación](./clase2.md)
+
+### Modelo Entidad-Relación (ER)
+
+**Definición:**  
+Es un modelo conceptual para representar los requerimientos de datos de forma no técnica, utilizando diagramas que facilitan la visualización y comunicación de la estructura de la información.
+
+**Contexto en la clase:**  
+Se usa para diseñar esquemas de bases de datos de forma concisa y evitar problemas de diseño, sirviendo además como complemento del modelo relacional.
+
+---
+
+### Entidad
+
+**Definición:**  
+Objeto o concepto del mundo real que se modela en el sistema. Es representado en el diagrama como un contenedor (usualmente un rectángulo).
+
+**Ejemplo:**  
+`Producto`, `Compañia`, `Persona`.
+
+**Nota:**  
+Cada entidad debe tener una llave identificadora (generalmente mostrada subrayada).
+
+---
+
+### Atributo
+
+**Definición:**  
+Característica o propiedad que describe una entidad.
+
+**Ejemplo:**  
+`nombre`, `precio`, `categoria`, `fecha`.
+
+**Detalles:**
+
+- **Simples:** Un solo valor por entidad (ej. `nombre`).
+- **Multivaluados:** Pueden tomar varios valores para una misma entidad (representados con doble óvalo).
+
+---
+
+### Relación
+
+**Definición:**  
+Asociación o vínculo entre dos o más entidades que indica cómo interactúan o se conectan.
+
+**Ejemplo:**  
+`compra`, `fabrica`, `alquila`.
+
+**Nota:**  
+Las relaciones se representan en diagramas mediante rombos o círculos y, a diferencia de las entidades, no tienen llaves propias. Pueden, sin embargo, tener atributos asociados.
+
+---
+
+### Multiplicidad de Relaciones
+
+**Definición:**  
+Indica la cantidad de instancias de una entidad que pueden estar asociadas a instancias de otra entidad.
+
+**Ejemplos de Multiplicidad:**
+
+- **n a n:** Una entidad A puede estar relacionada con cero o muchas instancias de B, y viceversa.
+- **n a 0 o 1:** Una entidad A puede relacionarse con cero o muchas instancias de B, mientras B se asocia a lo más a una A.
+- **0 o 1 a n:** Una entidad A se asocia a lo más a una instancia, mientras B puede tener cero o muchas A.
+- **0 o 1 a 1 o más:** Restricción que varía según las necesidades de participación.
+- **n a 1:** Muchas instancias de A están asociadas a exactamente una instancia de B.
+
+---
+
+### Atributos Multivaluados
+
+**Definición:**  
+Atributos que pueden contener más de un valor para una misma entidad.
+
+**Representación en diagramas:**  
+Se representan como un doble óvalo o círculo.
+
+**Ejemplo:**  
+Una `Persona` puede tener varias `profesiones`.
+
+---
+
+### Relaciones Múltiples
+
+**Definición:**  
+Relaciones que involucran a tres o más entidades de forma simultánea.
+
+**Ejemplo:**  
+Una relación `alquila` que asocia `Pelicula`, `Local de Videos` y `Persona`.
+
+**Nota:**  
+Aunque son menos comunes, se pueden transformar en relaciones binarias para mayor flexibilidad.
+
+---
+
+### Roles en Relaciones
+
+**Definición:**  
+Designaciones que indican la función o participación de una misma entidad en una relación cuando aparece más de una vez.
+
+**Ejemplos:**
+
+- En la relación `alquila`, un `Usuario` puede aparecer como `cliente` y también como `cajero`.
+- En la relación `sigue`, un `Usuario` actúa como `seguidor` y como `seguido`.
+
+---
+
+### Entidad Débil
+
+**Definición:**  
+Entidad que depende de otra (la entidad padre) para su identificación, ya que no posee atributos suficientes para ser única por sí sola.
+
+**Características:**
+
+- Posee una llave parcial, representada con subrayado punteado.
+- Su identificación se completa combinando la llave parcial con la llave de la entidad padre.
+
+**Ejemplo:**  
+`Evaluación` dependiente de `Curso`.
+
+---
+
+### Jerarquía entre Entidades (IsA)
+
+**Definición:**  
+Estructura que permite definir una relación de herencia entre entidades, donde las subentidades heredan los atributos de la entidad padre.
+
+**Ejemplo:**  
+`Deportista` es una entidad padre de `Futbolista` y `Tenista`.
+
+**Detalles:**  
+Esta estructura facilita la especialización de entidades y la reutilización de atributos comunes.
+
+---
+
+### Transformación del Modelo ER al Modelo Relacional
+
+**Definición:**  
+Proceso de convertir el modelo conceptual (ER) en un esquema relacional, generando tablas a partir de entidades y relaciones.
+
+**Puntos clave:**
+
+- Las entidades (no débiles) se transforman en tablas que conservan sus atributos y llaves.
+- Las relaciones se pasan a tablas cuya llave es la unión de las llaves de las entidades relacionadas y se convierten en _foreign_keys_.
+- Se pueden aplicar simplificaciones según restricciones de multiplicidad.
+
+---
+
+### Simplificaciones según Restricciones
+
+**Definición:**  
+Ajustes en la transformación del modelo ER al modelo relacional para optimizar la estructura, como simplificar o eliminar la tabla de una relación si la multiplicidad lo permite.
+
+**Ejemplo:**  
+Si una relación tiene multiplicidad 0 o 1, se puede fusionar con una de las entidades, simplificando así la llave de la tabla resultante.
