@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import { Hero } from "@site/src/sections/Hero";
+import LogoTicker from "@site/src/sections/LogoTicker";
+import ShowProject from "@site/src/components/ShowProject";
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
@@ -13,6 +13,28 @@ export default function Home(): ReactNode {
       description="AldoRed: Software Solutions for Your Business"
     >
       <Hero />
+
+      <LogoTicker />
+
+      <ShowProject
+        projectName="AldoERP"
+        image="/img/logo-AldoERP-gbfree.webp"
+        description="Sistema ERP personalizable que integra autenticación, gestión de usuarios y módulos a medida para optimizar procesos empresariales y mejorar la toma de decisiones"
+        primaryText="Primeros pasos"
+        primaryUrl="https://github.com/"
+        secondaryText="Documentación"
+        secondaryUrl="https://docs.github.com/"
+      />
+
+      <ShowProject
+        projectName="Educación"
+        image="/img/books.png"
+        description="Diferentes recursos educativos relacionados con la programación y el desarrollo de software"
+        primaryText="Ver más"
+        primaryUrl="https://github.com/"
+        secondaryText="Documentación"
+        secondaryUrl="https://docs.github.com/"
+      />
     </Layout>
   );
 }

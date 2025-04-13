@@ -1,0 +1,66 @@
+/* Light mode styles (default) */
+:root {
+  --logo-ticker-bg: white;
+  --logo-ticker-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --logo-ticker-bg: #1b1b1d;
+  --logo-ticker-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    white 15%,
+    white 85%,
+    transparent 100%
+  );
+}
+
+.logoTickerWrapper {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--logo-ticker-bg);
+}
+
+@media (min-width: 768px) {
+  .logoTickerWrapper {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.logoTickerContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.logoTickerFlex {
+  display: flex;
+  overflow: hidden;
+  mask-image: var(--logo-ticker-mask);
+}
+
+.logoTickerMotion {
+  display: flex;
+  gap: 3.5rem;
+  flex: none;
+  padding-right: 3.5rem;
+}
+
+.logoTickerImage {
+  height: 4rem;
+  width: auto;
+}
+
+.bgBlack {
+  background-color: var(--logo-ticker-bg);
+}

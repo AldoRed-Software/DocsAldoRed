@@ -47,25 +47,9 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/AldoRed-Software/DocsAldoRed/tree/main/docs",
+          editUrl: "https://github.com/AldoRed-Software/DocsAldoRed/tree/main",
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/AldoRed-Software/DocsAldoRed/tree/main/docs",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -94,11 +78,43 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "docs",
           position: "left",
-          label: "Docs",
+          label: "Documentación",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        {
+          to: "/docs/category/education",
+          label: "Educación",
+          position: "left",
+        },
+        {
+          type: "dropdown",
+          label: "Software",
+          position: "left",
+          to: "/docs/software/intro",
+          items: [
+            {
+              label: "AldoERP",
+              to: "/docs/category/aldoerp",
+            },
+            {
+              label: "Módulo gestor proyectos",
+              to: "/docs/software/AldoERP/modulos/gProyectos/changelog",
+            },
+            {
+              label: "Módulo gestor colaboradores",
+              to: "/docs/category/education",
+            },
+            {
+              label: "Módulo gestor documental",
+              to: "/docs/category/education",
+            },
+            {
+              label: "Módulo gestor reuniones",
+              to: "/docs/category/education",
+            },
+          ],
+        },
       ],
     },
     footer: {
@@ -108,8 +124,16 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Docs",
+              label: "Bienvenida",
               to: "/docs/intro",
+            },
+            {
+              label: "Educación",
+              to: "/docs/category/education",
+            },
+            {
+              label: "AldoERP",
+              to: "/docs/category/aldoerp",
             },
           ],
         },
@@ -118,16 +142,7 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
+              href: "https://github.com/AldoRed-Software",
             },
           ],
         },

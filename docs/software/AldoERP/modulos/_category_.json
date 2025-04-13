@@ -1,0 +1,9 @@
+{
+  "label": "Módulos",
+  "description": "modules for AldoERP",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Modules for AldoERP"
+  }
+}

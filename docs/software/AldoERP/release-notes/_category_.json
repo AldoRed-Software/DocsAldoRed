@@ -1,0 +1,9 @@
+{
+  "label": "Release Notes",
+  "description": "Release notes for AldoERP",
+  "position": 1,
+  "link": {
+    "type": "doc",
+    "id": "changelog"
+  }
+}

@@ -1,77 +1,91 @@
-/* Hero.css */
+:root {
+  --hero-bg-color: #fff;
+  --hero-text-primary: #01579b;
+  --hero-text-secondary: #4f5e6f;
+  --hero-shadow: rgba(0, 0, 0, 0.05);
+  --hero-decoration-bg: #e3f2fd;
+  --hero-cta-bg: #0288d1;
+  --hero-cta-text: #fff;
+  --hero-cta-hover: #014a85;
+}
+
+[data-theme="dark"] {
+  --hero-bg-color: #1b1b1d;
+  --hero-text-primary: #fcfcfc;
+  --hero-text-secondary: #b8b8b8;
+  --hero-shadow: rgba(0, 0, 0, 0.2);
+  --hero-decoration-bg: #0288d1;
+  --hero-cta-bg: #01579b;
+  --hero-cta-text: #fff;
+  --hero-cta-hover: #014a85;
+}
 
 .hero-container {
-    display: flex;
-    flex-wrap: wrap; /* Para que sea responsive y no se rompa en pantallas pequeñas */
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 2rem;
-    background: #ffffff; /* Fondo blanco, puedes cambiarlo según tu diseño */
-    border-radius: 1rem; /* Sutil redondeo, similar a la captura */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--hero-bg-color);
 }
 
 .hero-content {
-    flex: 1 1 50%;
-    max-width: 600px;
-    margin-bottom: 2rem; /* Espacio debajo en pantallas pequeñas */
+  flex: 1 1 50%;
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
 .hero-title {
-    font-size: 2.5rem;
-    color: #01579b; /* Color principal: light-blue darken-4 (o el que uses en tu marca) */
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--hero-text-primary);
+  margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: #4f5e6f; /* Un tono gris/azulado para contraste */
-    margin-bottom: 2rem;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  color: var(--hero-text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .hero-cta {
-    display: inline-block;
-    background-color: #01579b; /* Color de fondo del botón */
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: var(--hero-cta-bg);
+  color: var(--hero-cta-text);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .hero-cta:hover {
-    background-color: #014a85; /* Un tono más oscuro al hacer hover */
+  background-color: var(--hero-cta-hover);
+  color: var(--hero-cta-text);
+  text-decoration: none;
 }
 
 .hero-image {
-    flex: 1 1 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.hero-container {
-    position: relative; /* Para que los pseudo-elementos se posicionen dentro del contenedor */
-    overflow: hidden; /* Para que no se vean los recortes fuera del contenedor, si lo deseas */
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
 }
 
 .hero-container::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background-color: #e3f2fd; /* Un azul clarito para dar contraste */
-    border-radius: 50%;
-    z-index: -1; /* Para que quede detrás del contenido */
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: -1;
 }
