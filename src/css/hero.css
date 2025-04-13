@@ -21,6 +21,8 @@
 }
 
 .hero-container {
+  position: relative;
+  overflow-x: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
