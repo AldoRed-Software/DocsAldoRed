@@ -19,182 +19,128 @@ export const LogoTicker = () => {
             }}
           >
             <a
-              href="https://locampino.cl"
+              href="https://www.mujeresia.cl/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-locampino.png"
-                alt="Lo Campino Logo"
+                src="/img/clientes/logo-mujeresia.png"
+                alt="Mujeres IA Logo"
                 className="logoTickerImage"
               />
             </a>
             <a
-              href="https://es-la.facebook.com/miradordepumalal/"
+              href="https://filari.cl"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-miradordepumalal.png"
-                alt="Mirador de Pumalal Logo"
+                src="/img/clientes/logo-filari.png"
+                alt="Filari Logo"
+                className="logoTickerImage bgBlack"
+              />
+            </a>
+            <a href="https://20s.cl/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/img/clientes/logo-20s.png"
+                alt="20s Logo"
                 className="logoTickerImage"
               />
             </a>
             <a
-              href="https://impulsa-di.cl/"
+              href="https://www.machmotos.cl/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-impulsa.png"
-                alt="Impulsa Logo"
-                className="logoTickerImage"
-              />
-            </a>
-            <a
-              href="https://bravoizquierdo.cl/web/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/clientes/logo-bi.png"
-                alt="Bravo Izquierdo Logo"
-                className="logoTickerImage
-                "
-              />
-            </a>
-            <a
-              href="https://work-center.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/clientes/logo-workcenter.jpg"
-                alt="Work Center Logo"
-                className="logoTickerImage"
-              />
-            </a>
-            <a
-              href="http://www.maderaviva.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/clientes/logo-maderaviva.webp"
-                alt="Madera Viva Logo"
+                src="/img/clientes/logo-machmotos.png"
+                alt="Mach Motos Logo"
                 className="logoTickerImage bgBlack"
               />
             </a>
             <a
-              href="Http://Ivertice.cl"
+              href="https://renmach.machmotos.cl"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-vertice.png"
-                alt="Vértice Logo"
-                className="logoTickerImage
-                "
+                src="/img/clientes/logo-renmach.png"
+                alt="Renmach Logo"
+                className="logoTickerImage"
               />
             </a>
             <a
-              href="https://bicevida.cl"
+              href="https://aware.tools"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-bicevida.png"
-                alt="BICE Vida Logo"
+                src="/img/clientes/logo-awaretools.png"
+                alt="Aware Tools Logo"
                 className="logoTickerImage"
               />
             </a>
 
             {/* Second set of logos */}
             <a
-              href="https://locampino.cl"
+              href="https://www.mujeresia.cl/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-locampino.png"
-                alt="Lo Campino Logo"
+                src="/img/clientes/logo-mujeresia.png"
+                alt="Mujeres IA Logo"
                 className="logoTickerImage"
               />
             </a>
             <a
-              href="https://es-la.facebook.com/miradordepumalal/"
+              href="https://filari.cl"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-miradordepumalal.png"
-                alt="Mirador de Pumalal Logo"
+                src="/img/clientes/logo-filari.png"
+                alt="Filari Logo"
+                className="logoTickerImage bgBlack"
+              />
+            </a>
+            <a href="https://20s.cl/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/img/clientes/logo-20s.png"
+                alt="20s Logo"
                 className="logoTickerImage"
               />
             </a>
             <a
-              href="https://impulsa-di.cl/"
+              href="https://www.machmotos.cl/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-impulsa.png"
-                alt="Impulsa Logo"
-                className="logoTickerImage"
-              />
-            </a>
-            <a
-              href="https://bravoizquierdo.cl/web/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/clientes/logo-bi.png"
-                alt="Bravo Izquierdo Logo"
-                className="logoTickerImage"
-              />
-            </a>
-            <a
-              href="https://work-center.cl/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/clientes/logo-workcenter.jpg"
-                alt="Work Center Logo"
-                className="logoTickerImage"
-              />
-            </a>
-            <a
-              href="http://www.maderaviva.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/img/clientes/logo-maderaviva.webp"
-                alt="Madera Viva Logo"
+                src="/img/clientes/logo-machmotos.png"
+                alt="Mach Motos Logo"
                 className="logoTickerImage bgBlack"
               />
             </a>
             <a
-              href="Http://Ivertice.cl"
+              href="https://renmach.machmotos.cl"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-vertice.png"
-                alt="Vértice Logo"
+                src="/img/clientes/logo-renmach.png"
+                alt="Renmach Logo"
                 className="logoTickerImage"
               />
             </a>
             <a
-              href="https://bicevida.cl"
+              href="https://aware.tools"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/img/clientes/logo-bicevida.png"
-                alt="BICE Vida Logo"
+                src="/img/clientes/logo-awaretools.png"
+                alt="Aware Tools Logo"
                 className="logoTickerImage"
               />
             </a>
