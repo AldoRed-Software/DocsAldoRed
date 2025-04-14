@@ -31,7 +31,7 @@ export default function Home(): ReactNode {
         image="/img/books.png"
         description="Diferentes recursos educativos relacionados con la programación y el desarrollo de software"
         primaryText="Ver más"
-        primaryUrl="/docs/category/education"
+        primaryUrl="/docs/category/educación"
         secondaryText="Documentación"
         secondaryUrl="/docs/intro"
       />

@@ -29,8 +29,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "es",
+    locales: ["es"],
   },
 
   markdown: {
@@ -83,7 +83,7 @@ const config: Config = {
           label: "Documentación",
         },
         {
-          to: "/docs/category/education",
+          to: "/docs/category/educación",
           label: "Educación",
           position: "left",
         },
@@ -103,15 +103,15 @@ const config: Config = {
             },
             {
               label: "Módulo gestor colaboradores",
-              to: "/docs/category/education",
+              to: "/docs/category/educación",
             },
             {
               label: "Módulo gestor documental",
-              to: "/docs/category/education",
+              to: "/docs/category/educación",
             },
             {
               label: "Módulo gestor reuniones",
-              to: "/docs/category/education",
+              to: "/docs/category/educación",
             },
           ],
         },
@@ -129,7 +129,7 @@ const config: Config = {
             },
             {
               label: "Educación",
-              to: "/docs/category/education",
+              to: "/docs/category/educación",
             },
             {
               label: "AldoERP",
