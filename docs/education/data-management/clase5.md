@@ -1,4 +1,4 @@
 ---
-side_position: 6
+side_position: 2
 title: Lógica de primer orden y Cálculo relacional
 ---

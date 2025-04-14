@@ -1,4 +1,4 @@
 ---
-side_position: 9
+side_position: 2
 title: Bases de datos de grafos
 ---

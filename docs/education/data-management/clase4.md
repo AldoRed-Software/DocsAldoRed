@@ -1,4 +1,4 @@
 ---
-side_position: 5
+side_position: 2
 title: El lenguaje SQL
 ---
