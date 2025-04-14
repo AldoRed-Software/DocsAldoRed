@@ -21,9 +21,9 @@ export default function Home(): ReactNode {
         image="/img/logo-AldoERP-gbfree.webp"
         description="Sistema ERP personalizable que integra autenticación, gestión de usuarios y módulos a medida para optimizar procesos empresariales y mejorar la toma de decisiones"
         primaryText="Primeros pasos"
-        primaryUrl="https://github.com/"
+        primaryUrl="/docs/software/AldoERP/tutoriales/primeros-pasos"
         secondaryText="Documentación"
-        secondaryUrl="https://docs.github.com/"
+        secondaryUrl="/docs/category/aldoerp"
       />
 
       <ShowProject
@@ -31,9 +31,9 @@ export default function Home(): ReactNode {
         image="/img/books.png"
         description="Diferentes recursos educativos relacionados con la programación y el desarrollo de software"
         primaryText="Ver más"
-        primaryUrl="https://github.com/"
+        primaryUrl="/docs/category/education"
         secondaryText="Documentación"
-        secondaryUrl="https://docs.github.com/"
+        secondaryUrl="/docs/intro"
       />
     </Layout>
   );
