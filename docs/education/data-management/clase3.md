@@ -427,3 +427,8 @@ $Tenista \div Torneo$
 - $R_{2} = R_{1} \times Torneo$
 - $R_{3} = R_{2} - Tenistas$
 - $R_{final} = \pi_{nombre}(R_{3})$
+
+:::
+
+:::tip CONSEJO
+Revisa el glosario de esta clase [Glosario Álgebra Relacional](./glosary#clase-3---álgebra-relacional)

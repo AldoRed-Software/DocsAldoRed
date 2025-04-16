@@ -319,3 +319,43 @@ Ajustes en la transformación del modelo ER al modelo relacional para optimizar 
 
 **Ejemplo:**  
 Si una relación tiene multiplicidad 0 o 1, se puede fusionar con una de las entidades, simplificando así la llave de la tabla resultante.
+
+## Clase 3 - [Álgebra Relacional](./clase3.md)
+
+### Álgebra Relacional
+
+**Definición:**  
+Conjunto de operaciones procedurales que generan nuevas relaciones (tablas) a partir de relaciones existentes, propuesto por Edgar F. Codd en 1970 como uno de los lenguajes teóricos para consultas en el modelo relacional.
+
+**Características:**
+
+- **Lenguaje procedural:** especifica paso a paso cómo computar el resultado.
+- **Cerrado:** cada operación sobre relaciones devuelve otra relación.
+
+---
+
+### Relación
+
+**Definición:**  
+Tabla en el modelo relacional que representa un conjunto de tuplas con atributos definidos.
+
+**Notación:**  
+Escribir el nombre de la relación (por ejemplo, `Peliculas`) devuelve toda la tabla.
+
+---
+
+### Consulta
+
+**Definición:**  
+Expresión compuesta de operaciones de álgebra relacional que produce una nueva relación a partir de una o más relaciones de entrada.
+
+---
+
+### Selección (σ)
+
+**Definición:**  
+Operación que filtra las tuplas de una relación según una condición booleana.
+
+$$
+\sigma_{condicion}(R)
+$$
