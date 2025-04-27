@@ -40,7 +40,7 @@ $$
 $$
 
 $$
-\text{Humedad en base húmeda} \rightarrow \text{Humedad (\%)} = \frac{PesoInicial - PesoFinal}{PesoFinal} * 100
+\text{Humedad en base seca} \rightarrow \text{Humedad (\%)} = \frac{PesoInicial - PesoFinal}{PesoFinal} * 100
 $$
 
 :::
@@ -54,3 +54,18 @@ Importante para calcular el volumen necesario para el transporte y la disposici�
 $$
 \rho = \frac{Masa}{V}
 $$
+
+### Ejercicio
+
+1. Estimar el contenido de humedad global y densidad de un residuo sólido urbano cuyas características se dan en la siguiente tabla:
+
+| Componente          | Peso (kg) | Humedad (%) | Densidad (kg/m3) |
+| ------------------- | --------- | ----------- | ---------------- |
+| Residuos de comida  | 9         | 70          | 300              |
+| Papel y cartón      | 40        | 6           | 80               |
+| Plásticos           | 7         | 2           | 65               |
+| Textiles            | 3         | 10          | 60               |
+| Residuos del jardín | 20        | 60          | 100              |
+| Vidrio              | 8         | 2           | 160              |
+| Metales             | 10        | 3           | 160              |
+| Cenizas             | 3         | 8           | 480              |
