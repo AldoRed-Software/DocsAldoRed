@@ -75,65 +75,51 @@ Un sistema aerobio de $2 m^3$ se alimenta a razón de $4 m^3/d$ con una agua res
 
 Si la concentración de biomasa en el efluente es de $30 mg SSV/L$ y de $5 g SSV/L$ en la corriente de recirculación de lodos al reactor. Calcular el caudal que se debe purgar de dicha corriente para que el tiempo de residencia celular (TRS) sea de $10 días$.
 
-### Solución del ejercicio 1
+### Velocidad de sedimentación
 
-1. **Tiempo de residencia hidráulico (TRH)**
-
-$$
- TRH = \frac{V_{r}}{Q_{i}} = \frac{2 m^3}{4 m^3/d} = 0.5 \left[d\right]
-$$
-
-2. **Velocidad de carga orgánica (VCO)**
+#### Ley de Stokes:
 
 $$
- VCO = \frac{Q_{i} \cdot DQO_{i}}{V_{r}} = \frac{4 m^3/d \cdot 0.5 g DQO/L}{2 m^3} = 1 \left[\frac{kg DQO}{m^3 \cdot d}\right]
+VSZ = \frac{g \cdot (\rho_{lodo} - \rho_{agua}) \cdot d^2}{18 \cdot \mu}
 $$
 
-3.  **Velocidad de carga orgánica específica (VCO_esp)**
+Donde:
+
+- $g$: Aceleración de la gravedad ($9.81 m/s^2$)
+- $\rho_{lodo}$: Densidad del lodo (kg/m³)
+- $\rho_{agua}$: Densidad del agua (kg/m³)
+- $d$: Diámetro de la partícula (m)
+- $\mu$: Viscosidad del agua (Pa·s)
+
+Flóculos:
+
+- Tamaño: 10-150 μm --> Baja VSZ
+- Densidad: 1020-1040 kg/m³
+
+#### Índice volumétrico de lodos (IVL)
 
 $$
- VCO_{esp} = \frac{Q_{i} \cdot DQO_{i}}{V_{r} \cdot X_{r}} = \frac{4 m^3/d \cdot 0.5 g DQO/L}{2 m^3 \cdot 1.5 g SSV/L} = 0.67 \left[\frac{kg DQO}{kg SSV \cdot d}\right]
+IVL = \frac{Vol_{30}}{X \cdot V_{total}}
 $$
 
-4.  **Carga orgánica (CO)**
+Donde:
 
-$$
- CO = DQO_{i} \cdot Q_{i} = 0.5 \frac{g\ DQO}{L} \cdot 4 \frac{m^3}{d} = 2 \left[\frac{kg\ DQO}{d}\right]
-$$
+- $Vol_{30}$: Volumen lodo 30 minutos (mL)
+- $X$: Concentración biomasa (g SST/L)
+- $V_{total}$: Volumen de la probeta (L)
 
-5.  **Eficacia del tratamiento**
+Buena sedimentabilidad:
+IVL < 150 mL/g SST
 
-$$
- Eficacia = \frac{DQO_{i} - DQO_{e}}{DQO_{i}} \cdot 100 = \frac{0.5 g DQO/L - 0.08 g DQO/L}{0.5 g DQO/L} \cdot 100 = 84\%
-$$
+#### Influencia de la concentración de biomasa
 
-6. **Caudal de purga para un TRS de 10 días**
+La concentración de biomasa afecta significativamente los costos operativos:
 
-Para calcular el caudal de purga necesario para mantener un TRS de 10 días, utilizamos la siguiente fórmula:
+![Coste relativo vs concentración de biomasa](./img/costeRelativo.png)
 
-$$
-TRS = \frac{V_{r} \cdot X_{r}}{Q_{p} \cdot X_{p} + Q_{e} \cdot X_{e}}
-$$
+Puntos clave del gráfico:
 
-Donde: $Q_{e}$ es igual a $Q_{i} - Q_{p}$, es decir, el caudal de efluente es igual al caudal de entrada menos el caudal de purga.
-Sustituyendo los valores:
-
-$$
-Q_{e} = 4 m^3/d - Q_{p}
-$$
-
-Sustituyendo en la ecuación del TRS:
-
-$$
-10 = \frac{2 m^3 \cdot 1.5 g SSV/L}{Q_{p} \cdot 0.03 g SSV/L + (4 m^3/d - Q_{p}) \cdot 0.005 g SSV/L}
-$$
-
-Resolviendo la ecuación:
-
-$$
-10 \cdot (Q_{p} \cdot 0.03 + 0.005 \cdot (4 - Q_{p})) = 3
-$$
-
-$$
-Q_{p} = 0.03622 \left[m^3/d\right]
-$$
+- El punto óptimo de operación se encuentra entre 3-5 g SSV/L
+- El costo total es la suma de los costos del reactor y sedimentador
+- A bajas concentraciones, domina el costo del reactor
+- A altas concentraciones, aumenta el costo del sedimentador
