@@ -37,9 +37,17 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to EC2 with rsync
+      - name: Upload to temporary directory
         run: |
-          rsync -avz -e "ssh -i /tmp/key.pem" build/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/html/
+          rsync -avz -e "ssh -i /tmp/key.pem" build/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/home/${{ secrets.SERVER_USER }}/tmp-docs/
+
+      - name: Move files into /var/www/html with sudo
+        run: |
+          ssh -i /tmp/key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << EOF
+            sudo rm -rf /var/www/html/*
+            sudo cp -r /home/${{ secrets.SERVER_USER }}/tmp-docs/* /var/www/html/
+            sudo chown -R www-data:www-data /var/www/html/
+          EOF
 
       - name: Clean up SSH key
         run: rm -f /tmp/key.pem
