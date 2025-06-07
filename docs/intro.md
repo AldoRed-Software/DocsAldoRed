@@ -13,8 +13,8 @@ Para facilitar tu recorrido y aprendizaje, hemos organizado el contenido en secc
 ### Software
 
 - [AldoERP](/docs/category/aldoerp)
-- [Módulo Gestor de perfiles](./software/AldoERP/modulos/gDocumentos)
-- [Módulo Gestor documental técnico](./software/AldoERP/modulos/gDocumentos)
+- [Módulo Gestor de perfiles](./software/AldoERP/modulos/gProyectos/changelog)
+- [Módulo Gestor documental técnico](./software/AldoERP/modulos/gDocumentos/changelog)
 
 #### Cada uno de los links posee lo siguiente:
 
