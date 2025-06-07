@@ -9,7 +9,7 @@ import rehypeKatex from "rehype-katex";
 const config: Config = {
   title: "AldoRed",
   tagline: "Soluciones de software para tu empresa",
-  favicon: "img/logo.png",
+  favicon: "img/iconLogoAldoRed.png",
 
   // Set the production url of your site here
   url: "https://aldored.com",
