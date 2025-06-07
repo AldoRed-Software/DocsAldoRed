@@ -9,7 +9,7 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`AldoRed ${siteConfig.title}`}
+      title="Inicio"
       description="AldoRed: Software Solutions for Your Business"
     >
       <Hero />

@@ -8,7 +8,7 @@ import rehypeKatex from "rehype-katex";
 
 const config: Config = {
   title: "AldoRed",
-  tagline: "Dinosaurs are cool",
+  tagline: "Soluciones de software para tu empresa",
   favicon: "img/logo.png",
 
   // Set the production url of your site here
