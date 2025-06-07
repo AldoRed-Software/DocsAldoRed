@@ -13,6 +13,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Docusaurus site
+        run: pnpm build
+
       - name: Add SSH key
         run: |
           echo "${{ secrets.EC2_SSH_KEY }}" > /tmp/key.pem
@@ -23,9 +37,9 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Connect to EC2 to test SSH
+      - name: Deploy to EC2 with rsync
         run: |
-          ssh -i /tmp/key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "echo 'SSH connection successful'"
+          rsync -avz -e "ssh -i /tmp/key.pem" build/ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/html/
 
       - name: Clean up SSH key
         run: rm -f /tmp/key.pem
