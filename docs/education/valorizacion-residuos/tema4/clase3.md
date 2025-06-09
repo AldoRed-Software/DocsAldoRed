@@ -127,3 +127,73 @@ Puntos clave del gráfico:
 - El costo total es la suma de los costos del reactor y sedimentador
 - A bajas concentraciones, domina el costo del reactor
 - A altas concentraciones, aumenta el costo del sedimentador
+
+### Cinética microbiana
+
+Fases de crecimiento:
+
+1. Fase de aclimatación
+2. Fase de crecimiento exponencial
+3. Fase estacionaria
+4. Fase de muerte celular
+
+![Diagrama de fases de crecimiento microbiano](./img/cineticaMicrobiana.png)
+
+#### Fase 2: Crecimiento exponencial
+
+Velocidad de crecimiento:
+
+$$
+r_x = \frac{dX}{dt}
+$$
+
+Donde:
+
+- $X$: Concentración de biomasa (g SST/L)
+- $r_x$: Velocidad de crecimiento (g SST/día)
+
+Velocidad específica de crecimiento:
+
+$$
+\mu = \frac{r_x}{X} = \frac{1}{X} \cdot \frac{dX}{dt}
+$$
+
+$ \mu \text{ cte} \rightarrow X = X_0 \cdot e^{\mu (t - t_0)} $
+
+Tiempo de duplicación:
+
+$$
+t_d = \frac{ln(2)}{\mu}
+$$
+
+Modelo de Monod:
+
+![Diagrama de Monod](./img/modeloMonod.png)
+
+#### Fase 4: Muerte celular
+
+Coeficiente de decaimiento:
+
+$$
+k_d = \frac{dX}{dt} = -\mu \cdot X
+$$
+
+Velocidad neta de crecimiento:
+
+$$
+r'_x = \frac{\mu_{max} \cdot X \cdot S}{K_s + S} - k_d \cdot X
+$$
+
+Velocidad especifica de crecimiento neto:
+
+$$
+\mu' = \frac{\mu_{max} \cdot S}{K_s + S} - k_d
+$$
+
+Velocidad de consumo de sustrato:
+
+$$
+(-r_s) = \frac{r_{max} \cdot X \cdot S}{K_s + S}
+$$
+
+![Grafico velocidad de consumo de sustrato](./img/VelocidadConsumoSustrato.png)
