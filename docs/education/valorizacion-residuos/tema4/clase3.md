@@ -197,3 +197,20 @@ $$
 $$
 
 ![Grafico velocidad de consumo de sustrato](./img/VelocidadConsumoSustrato.png)
+
+### Estequiometría microbiana
+
+$\text{Microo + Sustratos} \rightarrow Y_{x/y} \cdot \text{Nuevos Microo} + Y_{p/s} \cdot \text{Productos Finales}$
+
+Coeficientes de rendimiento:
+
+- $Y_{x/y}$: Biomasa formada/substrato consumido
+- $Y_{p/s}$: Productos formados/substrato consumido
+
+$$
+r_x = Y_{x/y} \cdot (-r_s) = \frac{Y_{x/s}}{Y_{p/s}} \cdot r_p
+$$
+
+$$
+Y_{x/s} = \frac{\mu_{max}}{r_{max}}
+$$
