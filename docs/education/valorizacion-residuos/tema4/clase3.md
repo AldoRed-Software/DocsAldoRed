@@ -111,6 +111,10 @@ Donde:
 Buena sedimentabilidad:
 IVL < 150 mL/g SST
 
+#### Dieta Floculos
+
+![Dieta flóculos](./img/dietaOptima.png)
+
 #### Influencia de la concentración de biomasa
 
 La concentración de biomasa afecta significativamente los costos operativos:
