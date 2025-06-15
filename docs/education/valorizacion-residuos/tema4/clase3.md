@@ -214,3 +214,68 @@ $$
 $$
 Y_{x/s} = \frac{\mu_{max}}{r_{max}}
 $$
+
+### Balances de DQO
+
+Características de la DQO:
+
+```mermaid
+graph TD
+    A["DQO influente"] --> B["Biodegradable"]
+    A --> C["No biodegradable"]
+    B --> D["Soluble fácilmente biodegradable (Ss)<br>20%"]
+    B --> E["Particulada lentamente biodegradable (Xs)<br>60%"]
+    C --> F["Particulada no biodegradable (Xi)<br>13%"]
+    C --> G["Soluble no biodegradable (Si)<br>7%"]
+
+    style A fill:#fff,stroke:#00008B,stroke-width:1px
+    style B fill:#fff,stroke:#00008B,stroke-width:1px
+    style C fill:#fff,stroke:#00008B,stroke-width:1px
+    style D fill:#fff,stroke:#00008B,stroke-width:1px,color:#0000FF
+    style E fill:#fff,stroke:#00008B,stroke-width:1px,color:#0000FF
+    style F fill:#fff,stroke:#00008B,stroke-width:1px,color:#0000FF
+    style G fill:#fff,stroke:#00008B,stroke-width:1px,color:#0000FF
+```
+
+### Balance DQO: Estado estacionario
+
+$$
+\text{Entrada = Salida (kg O}_2\text{/d)}
+$$
+
+$$
+Q_0 \cdot DQO_0 - R_{O_2} = Q_{purga} \cdot DQO_{purga} + Q_{efluente} \cdot DQO_{efluente}
+$$
+
+Donde:
+
+- $Q_0$, $Q_{purga}$, $Q_{efluente}$: Caudal de entrada, purga y efluente (m³/d)
+- $DQO_0$, $DQO_{purga}$, $DQO_{efluente}$: DQO de entrada, purga y efluente (kg O₂/m³)
+- $R_{O_2}$: Requerimiento de oxígeno (kg O₂/d)
+
+### Requerimiento de oxígeno (R<sub>O<sub>2</sub></sub>)
+
+El requerimiento de oxígeno en sistemas de lodos activos puede calcularse mediante la siguiente expresión:
+
+$$
+R_{O_2} = Q_o \cdot (S_o - S) - (1.42) \left[ Q_e \cdot \frac{Y_{S/X} \cdot (S_o - S)}{1 + k_d \cdot TRS} + f_d \cdot k_d \cdot Q_e \cdot \frac{Y_{S/X} \cdot (S_o - S)}{1 + k_d \cdot TRS} \cdot TRS \right]
+$$
+
+Donde:
+
+- $R_{O_2}$: Requerimiento de oxígeno (kg O₂/d)
+- $Q_o$: Caudal de entrada (m³/d)
+- $S_o$: Concentración de DQO en el influente (kg O₂/m³)
+- $S$: Concentración de DQO en el efluente (kg O₂/m³)
+- $Y_{S/X}$: Coeficiente de rendimiento (kg SSV/kg DQO)
+- $k_d$: Coeficiente de decaimiento (d⁻¹)
+- $TRS$: Tiempo de residencia de sólidos (d)
+- $f_d$: Fracción de biomasa que se transforma en productos residuales
+- $1.42$: Factor de conversión de SSV a DQO (kg O₂/kg SSV)
+
+Esta ecuación se compone de:
+
+- **DQO eliminada**: $Q_o \cdot (S_o - S)$
+- **Biomasa generada**: El término dentro del corchete que representa la DQO convertida en nueva biomasa
+
+El balance entre estos componentes determina la cantidad de oxígeno necesaria para el proceso aerobio.
