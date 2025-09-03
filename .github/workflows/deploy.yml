@@ -10,30 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-
-      - name: Install pnpm
-        run: npm install -g pnpm
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build Docusaurus site
-        run: pnpm build
+        run: pnpm run build
 
       - name: Add SSH key
         run: |
+          # Create the key file from the secret and set correct permissions
           echo "${{ secrets.EC2_SSH_KEY }}" > /tmp/key.pem
           chmod 600 /tmp/key.pem
 
       - name: Add server to known_hosts
         run: |
+          # Add the server's fingerprint to the known_hosts file for a secure connection
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
@@ -43,11 +48,13 @@ jobs:
 
       - name: Move files into /var/www/html with sudo
         run: |
-          ssh -i /tmp/key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << EOF
+          ssh -i /tmp/key.pem ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
             sudo rm -rf /var/www/html/*
             sudo cp -r /home/${{ secrets.SERVER_USER }}/tmp-docs/* /var/www/html/
             sudo chown -R www-data:www-data /var/www/html/
+            rm -rf /home/${{ secrets.SERVER_USER }}/tmp-docs/
           EOF
 
       - name: Clean up SSH key
+        if: always()
         run: rm -f /tmp/key.pem
