@@ -1,0 +1,766 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "AldoRed RPA Contable API",
+    "description": "API para automatización de procesos contables con integración al SII (Servicio de Impuestos Internos) de Chile. RPA contable segura con proxy SSL y contenedores aislados.",
+    "version": "1.3.0",
+    "contact": {
+      "name": "AldoRed Support",
+      "email": "aldo@aldored.com",
+      "url": "https://aldored.com"
+    },
+    "license": {
+      "name": "Commercial",
+      "url": "https://aldored.com/terms"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.aldored.com",
+      "description": "Production server"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/sii/rcv/informe-previo/{periodos}": {
+      "post": {
+        "summary": "RCV Informe Previo",
+        "description": "Informe previo de Recepción de Ventas por periodo - Descarga archivo ZIP",
+        "tags": ["SII - RCV"],
+        "parameters": [
+          {
+            "name": "periodos",
+            "in": "path",
+            "required": true,
+            "description": "Períodos a consultar (formato: YYYYMM)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{6}$",
+              "example": "202501"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SIICredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Archivo ZIP con el informe previo",
+            "content": {
+              "application/zip": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error en los parámetros de entrada"
+          },
+          "401": {
+            "description": "Token de autorización inválido"
+          },
+          "403": {
+            "description": "Credenciales SII inválidas"
+          },
+          "429": {
+            "description": "Límite de consultas excedido"
+          }
+        }
+      }
+    },
+    "/sii/bte/emitidas/documentos/{emisor}/{periodo}": {
+      "post": {
+        "summary": "BTE Emitidas",
+        "description": "Boletas Tributarias Electrónicas emitidas por periodo (YYYYMM)",
+        "tags": ["SII - BTE"],
+        "parameters": [
+          {
+            "name": "emisor",
+            "in": "path",
+            "required": true,
+            "description": "RUT del emisor (formato: 12345678-9)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{7,8}-[\\dkK]$",
+              "example": "12345678-9"
+            }
+          },
+          {
+            "name": "periodo",
+            "in": "path",
+            "required": true,
+            "description": "Período a consultar (formato: YYYYMM)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{6}$",
+              "example": "202501"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SIICredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Lista de BTE emitidas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BTEResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error en los parámetros de entrada"
+          },
+          "401": {
+            "description": "Token de autorización inválido"
+          },
+          "403": {
+            "description": "Credenciales SII inválidas"
+          },
+          "429": {
+            "description": "Límite de consultas excedido"
+          }
+        }
+      }
+    },
+    "/sii/bhe/recibidas/documentos/{receptor}/{periodo}": {
+      "post": {
+        "summary": "BHE Recibidas",
+        "description": "Boletas de Honorarios recibidas por periodo (YYYYMM)",
+        "tags": ["SII - BHE"],
+        "parameters": [
+          {
+            "name": "receptor",
+            "in": "path",
+            "required": true,
+            "description": "RUT del receptor (formato: 12345678-9)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{7,8}-[\\dkK]$",
+              "example": "12345678-9"
+            }
+          },
+          {
+            "name": "periodo",
+            "in": "path",
+            "required": true,
+            "description": "Período a consultar (formato: YYYYMM)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{6}$",
+              "example": "202501"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SIICredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Lista de BHE recibidas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BHEResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error en los parámetros de entrada"
+          },
+          "401": {
+            "description": "Token de autorización inválido"
+          },
+          "403": {
+            "description": "Credenciales SII inválidas"
+          },
+          "429": {
+            "description": "Límite de consultas excedido"
+          }
+        }
+      }
+    },
+    "/api/RCV/compras/{year}/{month}": {
+      "post": {
+        "summary": "RCV Compras Mensual",
+        "description": "Consulta RCV de compras por mes (YYYY/MM)",
+        "tags": ["SII - RCV"],
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "description": "Año (formato: YYYY)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}$",
+              "example": "2025"
+            }
+          },
+          {
+            "name": "month",
+            "in": "path",
+            "required": true,
+            "description": "Mes (formato: MM)",
+            "schema": {
+              "type": "string",
+              "pattern": "^(0[1-9]|1[0-2])$",
+              "example": "01"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SIICredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Datos de RCV compras mensual",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RCVResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error en los parámetros de entrada"
+          },
+          "401": {
+            "description": "Token de autorización inválido"
+          },
+          "403": {
+            "description": "Credenciales SII inválidas"
+          },
+          "429": {
+            "description": "Límite de consultas excedido"
+          }
+        }
+      }
+    },
+    "/api/RCV/compras/{year}/{month}/{day}": {
+      "post": {
+        "summary": "RCV Compras por Día",
+        "description": "Consulta RCV de compras por fecha específica (DD/MM/YYYY)",
+        "tags": ["SII - RCV"],
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "description": "Año (formato: YYYY)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}$",
+              "example": "2025"
+            }
+          },
+          {
+            "name": "month",
+            "in": "path",
+            "required": true,
+            "description": "Mes (formato: MM)",
+            "schema": {
+              "type": "string",
+              "pattern": "^(0[1-9]|1[0-2])$",
+              "example": "01"
+            }
+          },
+          {
+            "name": "day",
+            "in": "path",
+            "required": true,
+            "description": "Día (formato: DD)",
+            "schema": {
+              "type": "string",
+              "pattern": "^(0[1-9]|[12]\\d|3[01])$",
+              "example": "15"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SIICredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Datos de RCV compras por día",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RCVResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error en los parámetros de entrada"
+          },
+          "401": {
+            "description": "Token de autorización inválido"
+          },
+          "403": {
+            "description": "Credenciales SII inválidas"
+          },
+          "429": {
+            "description": "Límite de consultas excedido"
+          }
+        }
+      }
+    },
+    "/api/RCV/ventas/{year}/{month}/{day}": {
+      "post": {
+        "summary": "RCV Ventas",
+        "description": "Consulta RCV de ventas por fecha específica (DD/MM/YYYY)",
+        "tags": ["SII - RCV"],
+        "parameters": [
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "description": "Año (formato: YYYY)",
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d{4}$",
+              "example": "2025"
+            }
+          },
+          {
+            "name": "month",
+            "in": "path",
+            "required": true,
+            "description": "Mes (formato: MM)",
+            "schema": {
+              "type": "string",
+              "pattern": "^(0[1-9]|1[0-2])$",
+              "example": "01"
+            }
+          },
+          {
+            "name": "day",
+            "in": "path",
+            "required": true,
+            "description": "Día (formato: DD)",
+            "schema": {
+              "type": "string",
+              "pattern": "^(0[1-9]|[12]\\d|3[01])$",
+              "example": "15"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SIICredentials"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Datos de RCV ventas por día",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RCVResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error en los parámetros de entrada"
+          },
+          "401": {
+            "description": "Token de autorización inválido"
+          },
+          "403": {
+            "description": "Credenciales SII inválidas"
+          },
+          "429": {
+            "description": "Límite de consultas excedido"
+          }
+        }
+      }
+    },
+    "/buk/crear-nueva-api-key/": {
+      "post": {
+        "summary": "BUK - Crear Nueva API Key",
+        "description": "Crear una nueva API Key para integración con BUK",
+        "tags": ["BUK"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAPIKeyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "API Key creada exitosamente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/APIKeyResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error en los parámetros de entrada"
+          },
+          "401": {
+            "description": "Token de autorización inválido"
+          },
+          "429": {
+            "description": "Límite de consultas excedido"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "Token de autorización requerido. Formato: Bearer <tu_api_key>"
+      }
+    },
+    "schemas": {
+      "SIICredentials": {
+        "type": "object",
+        "required": ["rut_login", "clave_sii"],
+        "properties": {
+          "rut_login": {
+            "type": "string",
+            "description": "RUT para login en SII",
+            "pattern": "^\\d{7,8}-[\\dkK]$",
+            "example": "12345678-9"
+          },
+          "clave_sii": {
+            "type": "string",
+            "description": "Clave de acceso al SII",
+            "format": "password",
+            "example": "password123"
+          }
+        }
+      },
+      "BTEResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["success", "error"],
+            "description": "Estado de la respuesta"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BTEDocument"
+            }
+          },
+          "total_documentos": {
+            "type": "integer",
+            "description": "Total de documentos encontrados"
+          },
+          "periodo": {
+            "type": "string",
+            "description": "Período consultado"
+          }
+        }
+      },
+      "BTEDocument": {
+        "type": "object",
+        "properties": {
+          "numero_documento": {
+            "type": "string",
+            "description": "Número del documento"
+          },
+          "fecha_emision": {
+            "type": "string",
+            "format": "date",
+            "description": "Fecha de emisión"
+          },
+          "monto_neto": {
+            "type": "number",
+            "description": "Monto neto del documento"
+          },
+          "monto_iva": {
+            "type": "number",
+            "description": "Monto IVA del documento"
+          },
+          "monto_total": {
+            "type": "number",
+            "description": "Monto total del documento"
+          },
+          "rut_receptor": {
+            "type": "string",
+            "description": "RUT del receptor"
+          }
+        }
+      },
+      "BHEResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["success", "error"],
+            "description": "Estado de la respuesta"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BHEDocument"
+            }
+          },
+          "total_documentos": {
+            "type": "integer",
+            "description": "Total de documentos encontrados"
+          },
+          "periodo": {
+            "type": "string",
+            "description": "Período consultado"
+          }
+        }
+      },
+      "BHEDocument": {
+        "type": "object",
+        "properties": {
+          "numero_documento": {
+            "type": "string",
+            "description": "Número del documento"
+          },
+          "fecha_emision": {
+            "type": "string",
+            "format": "date",
+            "description": "Fecha de emisión"
+          },
+          "monto_honorarios": {
+            "type": "number",
+            "description": "Monto de honorarios"
+          },
+          "retencion": {
+            "type": "number",
+            "description": "Monto de retención"
+          },
+          "monto_liquido": {
+            "type": "number",
+            "description": "Monto líquido a pagar"
+          },
+          "rut_emisor": {
+            "type": "string",
+            "description": "RUT del emisor"
+          },
+          "nombre_emisor": {
+            "type": "string",
+            "description": "Nombre del emisor"
+          }
+        }
+      },
+      "RCVResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["success", "error"],
+            "description": "Estado de la respuesta"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RCVDocument"
+            }
+          },
+          "total_documentos": {
+            "type": "integer",
+            "description": "Total de documentos encontrados"
+          },
+          "fecha_consulta": {
+            "type": "string",
+            "description": "Fecha consultada"
+          }
+        }
+      },
+      "RCVDocument": {
+        "type": "object",
+        "properties": {
+          "tipo_documento": {
+            "type": "string",
+            "description": "Tipo de documento (33, 34, 56, etc.)"
+          },
+          "numero_documento": {
+            "type": "string",
+            "description": "Número del documento"
+          },
+          "fecha_documento": {
+            "type": "string",
+            "format": "date",
+            "description": "Fecha del documento"
+          },
+          "rut_proveedor": {
+            "type": "string",
+            "description": "RUT del proveedor"
+          },
+          "razon_social": {
+            "type": "string",
+            "description": "Razón social del proveedor"
+          },
+          "monto_neto": {
+            "type": "number",
+            "description": "Monto neto"
+          },
+          "monto_iva": {
+            "type": "number",
+            "description": "Monto IVA"
+          },
+          "monto_total": {
+            "type": "number",
+            "description": "Monto total"
+          }
+        }
+      },
+      "CreateAPIKeyRequest": {
+        "type": "object",
+        "required": ["nombre", "vence", "scopes"],
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "description": "Nombre o propósito de la API Key",
+            "example": "Integración contabilidad automatizada"
+          },
+          "vence": {
+            "type": "string",
+            "format": "date",
+            "description": "Fecha de vencimiento (YYYY-MM-DD)",
+            "example": "2025-12-31"
+          },
+          "scopes": {
+            "type": "string",
+            "description": "Permisos separados por coma",
+            "example": "read:employees,write:payroll"
+          }
+        }
+      },
+      "APIKeyResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["success", "error"],
+            "description": "Estado de la respuesta"
+          },
+          "api_key": {
+            "type": "string",
+            "description": "Nueva API Key generada"
+          },
+          "nombre": {
+            "type": "string",
+            "description": "Nombre de la API Key"
+          },
+          "vence": {
+            "type": "string",
+            "format": "date",
+            "description": "Fecha de vencimiento"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Lista de permisos asignados"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Fecha de creación"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["error"]
+          },
+          "message": {
+            "type": "string",
+            "description": "Mensaje de error"
+          },
+          "code": {
+            "type": "integer",
+            "description": "Código de error"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "SII - RCV",
+      "description": "Registro de Compras y Ventas del SII"
+    },
+    {
+      "name": "SII - BTE",
+      "description": "Boletas Tributarias Electrónicas"
+    },
+    {
+      "name": "SII - BHE",
+      "description": "Boletas de Honorarios Electrónicas"
+    },
+    {
+      "name": "BUK",
+      "description": "Integración con plataforma BUK"
+    }
+  ]
+}
