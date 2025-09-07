@@ -39,6 +39,24 @@ const config: Config = {
 
   themes: ["@docusaurus/theme-mermaid"],
 
+  plugins: [
+    [
+      "@scalar/docusaurus",
+      {
+        label: "API Reference",
+        route: "/api",
+        configuration: {
+          spec: {
+            url: "/openapi.json",
+          },
+          theme: "solarized", // Otros temas: "alternate", "default", "moon", "purple", "solarized"
+          layout: "modern", // "classic" o "modern"
+          darkMode: true,
+        },
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",
@@ -82,6 +100,11 @@ const config: Config = {
         {
           to: "/docs/category/educación",
           label: "Educación",
+          position: "left",
+        },
+        {
+          to: "/api",
+          label: "API",
           position: "left",
         },
         {
@@ -131,6 +154,10 @@ const config: Config = {
             {
               label: "AldoERP",
               to: "/docs/category/aldoerp",
+            },
+            {
+              label: "API Reference",
+              to: "/api",
             },
           ],
         },
