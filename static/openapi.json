@@ -29,18 +29,20 @@
     "/sii/rcv/informe-previo/{periodos}": {
       "post": {
         "summary": "RCV Informe Previo",
-        "description": "Informe previo de Recepción de Ventas por periodo - Descarga archivo ZIP",
+        "description": "Genera un informe previo de registro de compra y ventas de los últimos N meses (especificado por el parámetro 'periodos') - Descarga archivo ZIP con PDF y EXCEL",
         "tags": ["SII - RCV"],
         "parameters": [
           {
             "name": "periodos",
             "in": "path",
             "required": true,
-            "description": "Períodos a consultar (formato: YYYYMM)",
+            "description": "Número de meses hacia atrás a consultar (rango: 1-12, por defecto: 12)",
             "schema": {
-              "type": "string",
-              "pattern": "^\\d{6}$",
-              "example": "202501"
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12,
+              "default": 12,
+              "example": 12
             }
           }
         ],
@@ -479,19 +481,31 @@
     "schemas": {
       "SIICredentials": {
         "type": "object",
-        "required": ["rut_login", "clave_sii"],
+        "required": ["auth"],
         "properties": {
-          "rut_login": {
-            "type": "string",
-            "description": "RUT para login en SII",
-            "pattern": "^\\d{7,8}-[\\dkK]$",
-            "example": "12345678-9"
-          },
-          "clave_sii": {
-            "type": "string",
-            "description": "Clave de acceso al SII",
-            "format": "password",
-            "example": "password123"
+          "auth": {
+            "type": "object",
+            "required": ["pass"],
+            "properties": {
+              "pass": {
+                "type": "object",
+                "required": ["rut", "clave"],
+                "properties": {
+                  "rut": {
+                    "type": "string",
+                    "description": "RUT para login en SII",
+                    "pattern": "^\\d{7,8}-[\\dkK]$",
+                    "example": "12345678-9"
+                  },
+                  "clave": {
+                    "type": "string",
+                    "description": "Clave de acceso al SII",
+                    "format": "password",
+                    "example": "password123"
+                  }
+                }
+              }
+            }
           }
         }
       },
