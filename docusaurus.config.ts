@@ -108,6 +108,11 @@ const config: Config = {
           position: "left",
         },
         {
+          to: "/precios",
+          label: "Precios",
+          position: "left",
+        },
+        {
           type: "dropdown",
           label: "Software",
           position: "left",
@@ -158,6 +163,10 @@ const config: Config = {
             {
               label: "API Reference",
               to: "/api",
+            },
+            {
+              label: "Precios",
+              to: "/precios",
             },
           ],
         },
