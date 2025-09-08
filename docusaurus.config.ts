@@ -52,6 +52,66 @@ const config: Config = {
           theme: "solarized", // Otros temas: "alternate", "default", "moon", "purple", "solarized"
           layout: "modern", // "classic" o "modern"
           darkMode: true,
+          showSidebar: true,
+          hideDownloadButton: false,
+          customCss: `
+            .scalar-app {
+              --scalar-font: 'Inter', sans-serif;
+            }
+            .scalar-api-client__send-button {
+              display: none !important;
+            }
+            .scalar-api-client {
+              border: 2px solid #f59e0b;
+              border-radius: 8px;
+              padding: 1rem;
+              margin: 1rem 0;
+              background: #fef3c7;
+              position: relative;
+            }
+            .scalar-api-client::before {
+              content: "CORS: Para probar la API, usa Postman, cURL o tu código. Ver guía completa →";
+              display: block;
+              color: #92400e;
+              font-weight: 600;
+              margin-bottom: 1rem;
+              padding: 0.5rem;
+              background: #fbbf24;
+              border-radius: 4px;
+              text-align: center;
+            }
+          `,
+          servers: [
+            {
+              url: "https://api.aldored.com",
+              description: "Production server",
+            },
+          ],
+          // Deshabilitar el cliente de peticiones del navegador
+          hideModels: false,
+          hideAuthentication: false,
+          // Personalizar el contenido de la documentación
+          metaData: {
+            title: "AldoRed RPA Contable API",
+            description: `
+              ## Cómo probar la API
+              
+              ** ¿Ves "Failed to fetch"?** Es normal, son políticas CORS del navegador.
+              
+              ### [Ver guía completa de testing](/docs/software/api-testing)
+              
+              ### Opciones recomendadas:
+              
+              **1. Postman** - Importa desde: https://aldored.com/openapi.json  
+              **2. cURL** - Copia los ejemplos de cada endpoint  
+              **3. Tu código** - Funciona perfecto desde aplicaciones reales  
+              
+              ---
+              
+              **Autenticación**: \`Authorization: Bearer tu_token\`  
+              **Soporte**: aldo@aldored.com
+            `,
+          },
         },
       },
     ],
