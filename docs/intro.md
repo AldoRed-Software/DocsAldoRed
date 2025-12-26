@@ -4,31 +4,23 @@ sidebar_position: 1
 
 # Bienvenida
 
-¡Bienvenido al centro oficial de documentación y recursos educativos de AldoRed! Aquí encontrarás guías completas, documentación detallada de proyectos y materiales exclusivos de aprendizaje diseñados para nuestros clientes y socios. Sumérgete para explorar, aprender y maximizar tu experiencia con nuestras soluciones innovadoras.
+Bienvenido a la documentación oficial de AldoRed. Aquí encontrarás todo lo necesario para conocer, implementar y sacar el máximo provecho de nuestras soluciones de software a la medida.
 
-### ¿Qué encontrarás en esta documentación?
+### Cómo avanzar rápido
 
-Para facilitar tu recorrido y aprendizaje, hemos organizado el contenido en secciones específicas:
+- **Explora la documentación:** visita las secciones de productos y guías prácticas para comenzar en minutos.
+- **Habla con nosotros:** si quieres conversar sobre tu proyecto, escribe a [aldo@aldored.com](mailto:aldo@aldored.com?subject=Quiero%20conocer%20sus%20soluciones) o usa el botón “Conversemos” en la página de inicio.
+- **Descarga y prueba:** revisa las notas de lanzamiento y ejemplos para validar integraciones de forma ágil.
 
-### Software
+### Secciones clave
 
-- [AldoERP](/docs/category/aldoerp)
-- [Módulo Gestor de perfiles](./software/AldoERP/modulos/gProyectos/changelog)
-- [Módulo Gestor documental técnico](./software/AldoERP/modulos/gDocumentos/changelog)
+- **Documentación**: guías paso a paso, configuraciones iniciales y mejores prácticas.
+  - [Educación](/docs/category/educación) — contenidos y tópicos de Data Management y Analytics.
+  - [AldoERP](/docs/category/aldoerp) — módulos, flujos y novedades.
+  - [API](/api) — referencia técnica y pruebas.
+- **Software**: recorrido por nuestros módulos (ERP, gestores documentales, proyectos, reuniones y más).
+- **Release notes y FAQs**: cambios recientes, próximas mejoras y respuestas rápidas a dudas comunes.
 
-#### Cada uno de los links posee lo siguiente:
+### ¿Necesitas ayuda?
 
-- **Tutoriales:**
-  Guías paso a paso para comenzar a utilizar nuestras herramientas, configuraciones iniciales y mejores prácticas para optimizar su uso.
-
-- **Notas de Lanzamiento (Release Notes):**  
-  Detalles actualizados de cada versión, incluyendo nuevas funcionalidades, mejoras y correcciones de errores. Además de información sobre próximos desarrollos.
-
-- **Preguntas y Respuestas frecuentes:**
-  Respuestas a las dudas más comunes, soluciones a problemas frecuentes y consejos útiles.
-
----
-
-### [Educación](/docs/category/educación)
-
-- [Tópicos en Data Management y Data Analytics](/docs/category/tópicos-en-data-management-y-data-analytics)
+Contáctanos en [aldo@aldored.com](mailto:aldo@aldored.com?subject=Quiero%20conocer%20sus%20soluciones) y cuéntanos qué necesitas optimizar. Estamos listos para acompañarte en la implementación.
