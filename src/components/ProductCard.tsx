@@ -9,6 +9,7 @@ interface ProductCardProps {
   cta?: {
     text: string;
     url: string;
+    external?: boolean;
   };
 }
 
@@ -35,7 +36,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         </ul>
       )}
       {cta && (
-        <a href={cta.url} className="product-card-cta">
+        <a
+          href={cta.url}
+          className="product-card-cta"
+          target={cta.external ? "_blank" : undefined}
+          rel={cta.external ? "noopener noreferrer" : undefined}
+        >
           {cta.text} →
         </a>
       )}

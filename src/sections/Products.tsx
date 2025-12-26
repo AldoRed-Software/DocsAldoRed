@@ -158,7 +158,7 @@ export const Products = () => {
             ]}
             cta={{
               text: "Más información",
-              url: "/docs/software/",
+              url: "/docs/software/AldoERP/tutoriales/primeros-pasos",
             }}
           />
 
@@ -174,7 +174,8 @@ export const Products = () => {
             ]}
             cta={{
               text: "Más información",
-              url: "/docs/software/",
+              url: "https://reservas.aldored.com/",
+              external: true,
             }}
           />
 
@@ -189,8 +190,9 @@ export const Products = () => {
               "Reportes en tiempo real",
             ]}
             cta={{
-              text: "Documentación",
-              url: "/api",
+              text: "Más información",
+              url: "https://api.aldored.com/",
+              external: true,
             }}
           />
 
@@ -222,7 +224,7 @@ export const Products = () => {
             ]}
             cta={{
               text: "Más información",
-              url: "/docs/software/",
+              url: "/docs/intro",
             }}
           />
         </div>
