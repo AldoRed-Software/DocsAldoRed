@@ -158,21 +158,6 @@ const config: Config = {
           label: "Documentación",
         },
         {
-          to: "/docs/category/educación",
-          label: "Educación",
-          position: "left",
-        },
-        {
-          to: "/api",
-          label: "API",
-          position: "left",
-        },
-        {
-          to: "/precios",
-          label: "Precios",
-          position: "left",
-        },
-        {
           type: "dropdown",
           label: "Software",
           position: "left",
