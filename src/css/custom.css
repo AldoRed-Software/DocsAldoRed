@@ -7,6 +7,9 @@
 @import url("./navbar.css");
 
 :root {
+  /* Layout y navbar */
+  --ifm-container-width: 1180px;
+  --ifm-navbar-padding-horizontal: 1.5rem;
   /* Colores primarios - Azul */
   --ifm-color-primary: #2196f3; /* Azul primario */
   --ifm-color-primary-dark: #1976d2; /* Azul más oscuro */
