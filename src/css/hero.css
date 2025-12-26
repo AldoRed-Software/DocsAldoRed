@@ -1,29 +1,29 @@
 :root {
   --hero-bg-color: #ffffff;
-  --hero-text-primary: #0f172a;
-  --hero-text-secondary: #64748b;
-  --hero-badge-bg: #f1f5f9;
-  --hero-badge-text: #475569;
-  --hero-cta-primary-bg: #0f172a;
+  --hero-text-primary: #1565c0;
+  --hero-text-secondary: #546e7a;
+  --hero-badge-bg: #e3f2fd;
+  --hero-badge-text: #1565c0;
+  --hero-cta-primary-bg: #2196f3;
   --hero-cta-primary-text: #ffffff;
-  --hero-cta-primary-hover: #1e293b;
-  --hero-cta-secondary-text: #0f172a;
-  --hero-cta-secondary-border: #e2e8f0;
-  --hero-cta-secondary-hover-bg: #f8fafc;
+  --hero-cta-primary-hover: #1976d2;
+  --hero-cta-secondary-text: #2196f3;
+  --hero-cta-secondary-border: #bbdefb;
+  --hero-cta-secondary-hover-bg: #e3f2fd;
 }
 
 [data-theme="dark"] {
-  --hero-bg-color: #0f172a;
-  --hero-text-primary: #f1f5f9;
-  --hero-text-secondary: #cbd5e1;
-  --hero-badge-bg: #1e293b;
-  --hero-badge-text: #94a3b8;
-  --hero-cta-primary-bg: #ffffff;
-  --hero-cta-primary-text: #0f172a;
-  --hero-cta-primary-hover: #f1f5f9;
-  --hero-cta-secondary-text: #f1f5f9;
-  --hero-cta-secondary-border: #334155;
-  --hero-cta-secondary-hover-bg: #1e293b;
+  --hero-bg-color: #0d1b2a;
+  --hero-text-primary: #64b5f6;
+  --hero-text-secondary: #b0bec5;
+  --hero-badge-bg: #1a237e;
+  --hero-badge-text: #64b5f6;
+  --hero-cta-primary-bg: #2196f3;
+  --hero-cta-primary-text: #ffffff;
+  --hero-cta-primary-hover: #42a5f5;
+  --hero-cta-secondary-text: #64b5f6;
+  --hero-cta-secondary-border: #1565c0;
+  --hero-cta-secondary-hover-bg: #1a237e;
 }
 
 .hero-container {

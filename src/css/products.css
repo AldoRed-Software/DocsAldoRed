@@ -1,13 +1,13 @@
 :root {
   --products-section-bg: #ffffff;
-  --products-text-primary: #0f172a;
-  --products-text-secondary: #64748b;
+  --products-text-primary: #1565c0;
+  --products-text-secondary: #546e7a;
 }
 
 [data-theme="dark"] {
-  --products-section-bg: #0f172a;
-  --products-text-primary: #f1f5f9;
-  --products-text-secondary: #cbd5e1;
+  --products-section-bg: #0d1b2a;
+  --products-text-primary: #64b5f6;
+  --products-text-secondary: #b0bec5;
 }
 
 .products-section {
@@ -16,7 +16,7 @@
 }
 
 .products-container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 

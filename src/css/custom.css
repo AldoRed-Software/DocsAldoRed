@@ -1,22 +1,26 @@
 /**
  * Paleta moderna minimalista
- * Basada en una propuesta limpia y profesional similar a Supabase
+ * Color principal: #2196f3 (Azul Material Design)
  */
+
+/* Importar estilos del navbar */
+@import url("./navbar.css");
+
 :root {
-  /* Colores primarios */
-  --ifm-color-primary: #0f172a; /* Slate 900 - Negro azulado oscuro */
-  --ifm-color-primary-dark: #1e293b; /* Slate 800 */
-  --ifm-color-primary-darker: #334155; /* Slate 700 */
-  --ifm-color-primary-darkest: #475569; /* Slate 600 */
-  --ifm-color-primary-light: #64748b; /* Slate 500 */
-  --ifm-color-primary-lighter: #94a3b8; /* Slate 400 */
-  --ifm-color-primary-lightest: #cbd5e1; /* Slate 300 */
+  /* Colores primarios - Azul */
+  --ifm-color-primary: #2196f3; /* Azul primario */
+  --ifm-color-primary-dark: #1976d2; /* Azul más oscuro */
+  --ifm-color-primary-darker: #1565c0; /* Azul aún más oscuro */
+  --ifm-color-primary-darkest: #0d47a1; /* Azul muy oscuro */
+  --ifm-color-primary-light: #42a5f5; /* Azul más claro */
+  --ifm-color-primary-lighter: #64b5f6; /* Azul claro */
+  --ifm-color-primary-lightest: #90caf9; /* Azul muy claro */
 
   /* Acento verde */
-  --color-accent: #10b981; /* Emerald 500 */
+  --color-accent: #2196f3; /* Mismo azul como acento */
 
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(33, 150, 243, 0.1);
 
   /* Espaciado */
   --ifm-spacing-horizontal: 1.5rem;
@@ -24,13 +28,13 @@
 
 /* Ajustes para el modo oscuro */
 [data-theme="dark"] {
-  --ifm-color-primary: #0f172a;
-  --ifm-color-primary-dark: #1e293b;
-  --ifm-color-primary-darker: #334155;
-  --ifm-color-primary-darkest: #475569;
-  --ifm-color-primary-light: #64748b;
-  --ifm-color-primary-lighter: #94a3b8;
-  --ifm-color-primary-lightest: #cbd5e1;
+  --ifm-color-primary: #2196f3;
+  --ifm-color-primary-dark: #1976d2;
+  --ifm-color-primary-darker: #1565c0;
+  --ifm-color-primary-darkest: #0d47a1;
+  --ifm-color-primary-light: #42a5f5;
+  --ifm-color-primary-lighter: #64b5f6;
+  --ifm-color-primary-lightest: #90caf9;
 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(33, 150, 243, 0.2);
 }
