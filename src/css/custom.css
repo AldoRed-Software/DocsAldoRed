@@ -1,29 +1,36 @@
 /**
- * Paleta basada en “#01579b light‑blue darken‑4” (Material Design Light Blue 900)
+ * Paleta moderna minimalista
+ * Basada en una propuesta limpia y profesional similar a Supabase
  */
 :root {
-  /* Tono base y variantes para el modo claro */
-  --ifm-color-primary: #01579b; /* Base (light-blue darken-4) */
-  --ifm-color-primary-dark: #014f90; /* Variante 1: un poco más oscuro */
-  --ifm-color-primary-darker: #014685; /* Variante 2: aún más oscuro */
-  --ifm-color-primary-darkest: #013e7b; /* Variante 3: el tono más oscuro */
-  --ifm-color-primary-light: #0277bd; /* Variante 1: un poco más claro (Light Blue 800) */
-  --ifm-color-primary-lighter: #0288d1; /* Variante 2: intermedio (Light Blue 700) */
-  --ifm-color-primary-lightest: #029be5; /* Variante 3: el tono más claro (Light Blue 600) */
+  /* Colores primarios */
+  --ifm-color-primary: #0f172a; /* Slate 900 - Negro azulado oscuro */
+  --ifm-color-primary-dark: #1e293b; /* Slate 800 */
+  --ifm-color-primary-darker: #334155; /* Slate 700 */
+  --ifm-color-primary-darkest: #475569; /* Slate 600 */
+  --ifm-color-primary-light: #64748b; /* Slate 500 */
+  --ifm-color-primary-lighter: #94a3b8; /* Slate 400 */
+  --ifm-color-primary-lightest: #cbd5e1; /* Slate 300 */
+
+  /* Acento verde */
+  --color-accent: #10b981; /* Emerald 500 */
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Espaciado */
+  --ifm-spacing-horizontal: 1.5rem;
 }
 
 /* Ajustes para el modo oscuro */
 [data-theme="dark"] {
-  --ifm-color-primary: #01579b;
-  --ifm-color-primary-dark: #014f90;
-  --ifm-color-primary-darker: #014685;
-  --ifm-color-primary-darkest: #013e7b;
-  --ifm-color-primary-light: #0277bd;
-  --ifm-color-primary-lighter: #0288d1;
-  --ifm-color-primary-lightest: #029be5;
+  --ifm-color-primary: #0f172a;
+  --ifm-color-primary-dark: #1e293b;
+  --ifm-color-primary-darker: #334155;
+  --ifm-color-primary-darkest: #475569;
+  --ifm-color-primary-light: #64748b;
+  --ifm-color-primary-lighter: #94a3b8;
+  --ifm-color-primary-lightest: #cbd5e1;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

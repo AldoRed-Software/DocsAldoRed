@@ -3,21 +3,29 @@ import "@site/src/css/hero.css";
 
 export const Hero = () => {
   return (
-    <section className="hero-container container">
+    <section className="hero-container">
       <div className="hero-content">
+        <div className="hero-badge">
+          <span className="badge-dot"></span>
+          <span className="badge-text">
+            Soluciones innovadoras para tu empresa
+          </span>
+        </div>
         <h1 className="hero-title">
-          AldoRed: Soluciones de Software a medida para tu negocio
+          Software personalizado que acelera tu negocio
         </h1>
         <p className="hero-subtitle">
-          Desarrollamos soluciones personalizadas para impulsar la eficiencia y
-          el crecimiento de tu empresa.
+          Desde herramientas empresariales hasta soluciones específicas para tu
+          industria. Diseñadas para ser intuitivas, confiables y escalables.
         </p>
-        <a href="/contact" className="hero-cta">
-          Contáctanos
-        </a>
-      </div>
-      <div className="hero-image">
-        <img src="/img/screen.png" alt="Mockup de software AldoRed" />
+        <div className="hero-cta-group">
+          <a href="#productos" className="hero-cta-primary">
+            Explorar productos
+          </a>
+          <a href="/docs/intro" className="hero-cta-secondary">
+            Ver documentación →
+          </a>
+        </div>
       </div>
     </section>
   );
