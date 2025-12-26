@@ -12,8 +12,11 @@ export const CTA = () => {
             optimizar tus procesos y acelerar el crecimiento de tu empresa.
           </p>
           <div className="cta-buttons">
-            <a href="/docs/intro" className="cta-primary-btn">
-              Contactar
+            <a
+              href="mailto:aldo@aldored.com?subject=Quiero%20conocer%20sus%20soluciones"
+              className="cta-primary-btn"
+            >
+              Conversemos
             </a>
             <a href="/docs/intro" className="cta-secondary-btn">
               Ver documentación
