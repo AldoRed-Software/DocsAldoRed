@@ -275,8 +275,6 @@ docs/
     Casos de uso
  release-notes/
     Novedades por versión
- troubleshooting.md (próximamente)
-    Guía de solución de problemas
 ```
 
 ---
@@ -315,7 +313,7 @@ Todos los datos son aislados por tenant y almacenados de forma segura en AWS.
 
 - [Documentación Completa](./features.md)
 - [Ejemplos de API](./integration-api.md)
-- [Guía de Solución de Problemas](./troubleshooting.md) _(próximamente)_
+- Guía de Solución de Problemas _(próximamente)_
 
 ### Profesional
 
