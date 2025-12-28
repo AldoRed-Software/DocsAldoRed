@@ -159,29 +159,28 @@ const config: Config = {
         },
         {
           type: "dropdown",
-          label: "Software",
+          label: "Productos",
           position: "left",
-          to: "/docs/software/intro",
           items: [
             {
-              label: "AldoERP",
-              to: "/docs/category/aldoerp",
+              label: "FIDATO",
+              to: "/docs/intro",
             },
             {
-              label: "Módulo gestor proyectos",
-              to: "/docs/software/AldoERP/modulos/gProyectos/changelog",
+              label: "Reservas AldoRed",
+              to: "/docs/reservas",
             },
             {
-              label: "Módulo gestor colaboradores",
-              to: "/docs/category/educación",
+              label: "API para SII",
+              to: "/api",
             },
             {
-              label: "Módulo gestor documental",
-              to: "/docs/category/educación",
+              label: "Asesorías y Consultorías",
+              to: "/docs/intro",
             },
             {
-              label: "Módulo gestor reuniones",
-              to: "/docs/category/educación",
+              label: "Carta AldoRed",
+              to: "/docs/intro",
             },
           ],
         },
