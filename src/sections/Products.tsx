@@ -8,128 +8,102 @@ interface Icon {
 
 const FidatoIcon = () => (
   <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width="50"
+    height="50"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-folder-search"
   >
-    <path
-      d="M7 3h18a2 2 0 012 2v22a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-    />
-    <path
-      d="M10 8h12M10 13h12M10 18h8"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M11 19h-6a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2h4l3 3h7a2 2 0 0 1 2 2v2.5" />
+    <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+    <path d="M20.2 20.2l1.8 1.8" />
   </svg>
 );
 
 const ReservasIcon = () => (
   <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width="50"
+    height="50"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-check"
   >
-    <path
-      d="M5 7h22a2 2 0 012 2v18a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-    />
-    <path
-      d="M7 5v4M25 5v4M5 15h22"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <circle cx="10" cy="21" r="1.5" fill="currentColor" />
-    <circle cx="16" cy="21" r="1.5" fill="currentColor" />
-    <circle cx="22" cy="21" r="1.5" fill="currentColor" />
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6" />
+    <path d="M16 3v4" />
+    <path d="M8 3v4" />
+    <path d="M4 11h16" />
+    <path d="M15 19l2 2l4 -4" />
   </svg>
 );
 
 const APIIcon = () => (
   <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width="50"
+    height="50"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-api"
   >
-    <path
-      d="M4 8h24a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V10a2 2 0 012-2z"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-    />
-    <path
-      d="M8 14l3 2-3 2M12 18h2M18 14l-3 2 3 2M24 14h-2"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M4 13h5" />
+    <path d="M12 16v-8h3a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-3" />
+    <path d="M20 8v8" />
+    <path d="M9 16v-5.5a2.5 2.5 0 0 0 -5 0v5.5" />
   </svg>
 );
 
 const ConsultoriaIcon = () => (
   <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width="50"
+    height="50"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-user-check"
   >
-    <circle
-      cx="16"
-      cy="10"
-      r="3"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-    />
-    <path
-      d="M22 18c0-3.314-2.686-6-6-6s-6 2.686-6 6v2h12v-2z"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-    />
-    <path
-      d="M6 26h20a2 2 0 002-2v-4"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+    <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+    <path d="M15 19l2 2l4 -4" />
   </svg>
 );
 
 const CartaIcon = () => (
   <svg
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width="50"
+    height="50"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="icon icon-tabler icons-tabler-outline icon-tabler-receipt"
   >
-    <path
-      d="M8 4h16a2 2 0 012 2v20a2 2 0 01-2 2H8a2 2 0 01-2-2V6a2 2 0 012-2z"
-      stroke="currentColor"
-      strokeWidth="2"
-      fill="none"
-    />
-    <path
-      d="M10 8h12M10 12h12M10 16h8M10 20h12"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" />
   </svg>
 );
 
