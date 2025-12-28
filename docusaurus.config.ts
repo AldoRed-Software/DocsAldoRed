@@ -163,16 +163,16 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "FIDATO",
-              to: "/docs/intro",
-            },
-            {
               label: "Reservas AldoRed",
               to: "/docs/reservas",
             },
             {
               label: "API para SII",
               to: "/api",
+            },
+            {
+              label: "Fidato",
+              to: "/docs/intro",
             },
             {
               label: "Asesorías y Consultorías",
