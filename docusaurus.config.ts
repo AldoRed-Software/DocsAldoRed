@@ -172,15 +172,15 @@ const config: Config = {
             },
             {
               label: "Fidato",
-              to: "/docs/intro",
+              to: "/docs/fidato",
             },
             {
               label: "Asesorías y Consultorías",
-              to: "/docs/intro",
+              to: "/docs/asesorias-consultorias",
             },
             {
               label: "Carta AldoRed",
-              to: "/docs/intro",
+              to: "/docs/carta",
             },
           ],
         },
