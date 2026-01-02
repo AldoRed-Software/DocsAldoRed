@@ -3,6 +3,8 @@ sidebar_position: 6
 title: Release Notes
 description: Novedades y mejoras del Sistema de Reservas de Salas
 slug: /reservas/release-notes/
+image: /img/metaCovers/releaseNotesPhoto.png
+keywords: [reservas, release notes, novedades, versiones, mejoras, changelog]
 ---
 
 # Novedades y Mejoras
