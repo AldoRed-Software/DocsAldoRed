@@ -17,16 +17,51 @@ Descubre qué hay de nuevo en cada versión del Sistema de Reservas. Aquí encon
 
 | Versión    | Fecha               | Estado   | Documentación             |
 | ---------- | ------------------- | -------- | ------------------------- |
-| **v2.0.0** | Diciembre 11, 2025  | Actual   | [Ver Novedades](./v2.0.0) |
+| **v3.0.0** | Febrero 26, 2026    | Actual   | [Ver Novedades](./v3.0.0) |
+| **v2.0.0** | Diciembre 11, 2025  | Anterior | [Ver Novedades](./v2.0.0) |
 | **v1.2.0** | Noviembre 1, 2025   | Anterior | [Ver Novedades](./v1.2.0) |
 | **v1.1.0** | Octubre 2, 2025     | Anterior | [Ver Novedades](./v1.1.0) |
 | **v1.0.0** | Septiembre 15, 2025 | Inicial  | [Ver Novedades](./v1.0.0) |
 
 ---
 
+## v3.0.0 - Febrero 26, 2026
+
+Asistente inteligente en WhatsApp que revoluciona la forma de interactuar con el sistema.
+
+### Lo Nuevo
+
+**Tu Asistente Personal en WhatsApp**
+
+- Bot inteligente integrado con la API de reservas
+- Recibe notificaciones y consulta información en el mismo chat
+- Disponible 24/7 para responder tus preguntas
+
+**Inteligencia Artificial Integrada**
+
+- Habla naturalmente por texto o voz
+- El asistente entiende lo que necesitas y responde al instante
+- No necesitas aprender comandos específicos
+
+**Funcionalidades Disponibles**
+
+- Consulta la agenda de cualquier sala
+- Lista todas las salas disponibles
+- Control total de la conversación
+
+**Próximamente en WhatsApp**
+
+- Crear reservas directamente desde el chat
+- Editar y cancelar tus reservas
+- Consultar disponibilidad de personas del equipo
+
+[Ver todos los detalles →](./v3.0.0)
+
+---
+
 ## v2.0.0 - Diciembre 11, 2025
 
-Lo que está llegando pronto con nuestra próxima versión importante.
+Cambios importantes para hacer tu experiencia más fluida y flexible.
 
 ### Lo Nuevo
 
@@ -140,14 +175,15 @@ El lanzamiento inicial con todo lo que necesitas para reservar salas.
 
 Estamos trabajando en:
 
-- **Próximas semanas**: Finalizar v2.0.0 con Google Meet abierto y edición de reservas
-- **Enero 2026**: Reservas que se repiten automáticamente
-- **Próximos meses**: Más integraciones y reportes
+- **Próximas semanas**: Crear, editar y cancelar reservas desde WhatsApp
+- **Próximos meses**: Consultar disponibilidad de personas del equipo
+- **2026**: Reservas recurrentes y reportes avanzados
+- **Futuro cercano**: Más integraciones con herramientas de tu equipo
 
 ---
 
 <div align="center">
 
-Última actualización: Diciembre 27, 2025
+Última actualización: Febrero 26, 2026
 
 </div>
