@@ -72,6 +72,22 @@ curl -X POST "https://api.aldored.com/sii/rcv/informe-previo/12" \
   --output informe.zip
 ```
 
+#### F22 Declaración de Renta
+
+```bash
+curl -X POST "https://api.aldored.com/sii/f22/2025" \
+  -H "Authorization: Bearer TU_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "auth": {
+        "pass": {
+          "rut": "12345678-9",
+          "clave": "tu_clave_sii"
+        }
+     }
+  }'
+```
+
 ### 3. Desde tu código
 
 #### JavaScript/Node.js
@@ -93,7 +109,7 @@ const response = await fetch(
         },
       },
     }),
-  }
+  },
 );
 
 const data = await response.json();
@@ -128,6 +144,284 @@ print(response.json())
 ```php
 <?php
 $url = "https://api.aldored.com/sii/bte/emitidas/documentos/12345678-9/202501";
+$headers = [
+     "Authorization: Bearer TU_API_TOKEN",
+     "Content-Type: application/json"
+];
+$data = json_encode([
+     "auth" => [
+          "pass" => [
+                "rut" => "12345678-9",
+                "clave" => "tu_clave_sii"
+          ]
+     ]
+]);
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+echo $response;
+?>
+```
+
+## SII F22 · Declaración de Renta
+
+**Endpoint:** `POST /sii/f22/{year}`
+
+Consulta el estado de la Declaración de Renta (Formulario 22) de un contribuyente para el año tributario indicado. Inicia sesión en el SII, selecciona el período y extrae folio, estado, situación tributaria y observaciones.
+
+### Respuesta en caso de éxito
+
+```json
+{
+  "success": true,
+  "data": {
+    "periodo": 2024,
+    "fechaSistema": "2026",
+    "contribuyente": {
+      "rut": "77710636-8",
+      "razonSocial": "EMPRESA EJEMPLO S.A."
+    },
+    "declaracion": {
+      "folio": 316644584,
+      "estado": "Aceptada",
+      "estadoCodigo": "ACE",
+      "fechaPresentacion": "11/04/2024",
+      "impugnada": false,
+      "situacionTributaria": {
+        "tipo": "calzado",
+        "monto": 0
+      },
+      "observaciones": [
+        { "codigo": "F135", "glosa": "Texto de la observación…" }
+      ]
+    }
+  }
+}
+```
+
+**Valores posibles:**
+
+| Campo                       | Valores                                                                 |
+| --------------------------- | ----------------------------------------------------------------------- |
+| `estado`                    | `Recibida` \| `Aceptada` \| `Aceptada con observaciones` \| `Rechazada` |
+| `estadoCodigo`              | `ENV` \| `ACE` \| `ODT` \| `RCH`                                        |
+| `situacionTributaria.tipo`  | `"devolucion"` \| `"a_pagar"` \| `"calzado"`                            |
+| `situacionTributaria.monto` | Entero en CLP; `0` si calzado                                           |
+
+**Casos especiales:**
+
+- Sin declaración para el período → `declaracion: null` + `motivo.codigo: "SIN_DECLARACION"`
+- RUT no encontrado → `contribuyente: null` + `motivo.codigo: "CONTRIBUYENTE_NO_ENCONTRADO"`
+- Período no disponible → `motivo.codigo: "PERIODO_FUTURO"`
+
+### Ejemplos de código
+
+#### JavaScript/Node.js
+
+```javascript
+const response = await fetch("https://api.aldored.com/sii/f22/2025", {
+  method: "POST",
+  headers: {
+    Authorization: "Bearer TU_API_TOKEN",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    auth: {
+      pass: {
+        rut: "12345678-9",
+        clave: "tu_clave_sii",
+      },
+    },
+  }),
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+#### Python
+
+```python
+import requests
+
+url = "https://api.aldored.com/sii/f22/2025"
+headers = {
+     "Authorization": "Bearer TU_API_TOKEN",
+     "Content-Type": "application/json"
+}
+data = {
+     "auth": {
+          "pass": {
+                "rut": "12345678-9",
+                "clave": "tu_clave_sii"
+          }
+     }
+}
+
+response = requests.post(url, headers=headers, json=data)
+print(response.json())
+```
+
+#### PHP
+
+```php
+<?php
+$url = "https://api.aldored.com/sii/f22/2025";
+$headers = [
+     "Authorization: Bearer TU_API_TOKEN",
+     "Content-Type: application/json"
+];
+$data = json_encode([
+     "auth" => [
+          "pass" => [
+                "rut" => "12345678-9",
+                "clave" => "tu_clave_sii"
+          ]
+     ]
+]);
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+echo $response;
+?>
+```
+
+## SII F22 · Declaración de Renta
+
+**Endpoint:** `POST /sii/f22/{year}`
+
+Consulta el estado de la Declaración de Renta (Formulario 22) de un contribuyente para el año tributario indicado. Inicia sesión en el SII, selecciona el período y extrae folio, estado, situación tributaria y observaciones.
+
+### Respuesta en caso de éxito
+
+```json
+{
+  "success": true,
+  "data": {
+    "periodo": 2024,
+    "fechaSistema": "2026",
+    "contribuyente": {
+      "rut": "77710636-8",
+      "razonSocial": "EMPRESA EJEMPLO S.A."
+    },
+    "declaracion": {
+      "folio": 316644584,
+      "estado": "Aceptada",
+      "estadoCodigo": "ACE",
+      "fechaPresentacion": "11/04/2024",
+      "impugnada": false,
+      "situacionTributaria": {
+        "tipo": "calzado",
+        "monto": 0
+      },
+      "observaciones": [
+        { "codigo": "F135", "glosa": "Texto de la observación…" }
+      ]
+    }
+  }
+}
+```
+
+**Valores posibles:**
+
+| Campo                       | Valores                                                                 |
+| --------------------------- | ----------------------------------------------------------------------- |
+| `estado`                    | `Recibida` \| `Aceptada` \| `Aceptada con observaciones` \| `Rechazada` |
+| `estadoCodigo`              | `ENV` \| `ACE` \| `ODT` \| `RCH`                                        |
+| `situacionTributaria.tipo`  | `"devolucion"` \| `"a_pagar"` \| `"calzado"`                            |
+| `situacionTributaria.monto` | Entero en CLP; `0` si calzado                                           |
+
+**Casos especiales:**
+
+- Sin declaración para el período → `declaracion: null` + `motivo.codigo: "SIN_DECLARACION"`
+- RUT no encontrado → `contribuyente: null` + `motivo.codigo: "CONTRIBUYENTE_NO_ENCONTRADO"`
+- Período no disponible → `motivo.codigo: "PERIODO_FUTURO"`
+
+### Ejemplos de código
+
+#### cURL
+
+```bash
+curl -X POST "https://api.aldored.com/sii/f22/2025" \
+  -H "Authorization: Bearer TU_API_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+     "auth": {
+        "pass": {
+          "rut": "12345678-9",
+          "clave": "tu_clave_sii"
+        }
+     }
+  }'
+```
+
+#### JavaScript/Node.js
+
+```javascript
+const response = await fetch("https://api.aldored.com/sii/f22/2025", {
+  method: "POST",
+  headers: {
+    Authorization: "Bearer TU_API_TOKEN",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    auth: {
+      pass: {
+        rut: "12345678-9",
+        clave: "tu_clave_sii",
+      },
+    },
+  }),
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+#### Python
+
+```python
+import requests
+
+url = "https://api.aldored.com/sii/f22/2025"
+headers = {
+     "Authorization": "Bearer TU_API_TOKEN",
+     "Content-Type": "application/json"
+}
+data = {
+     "auth": {
+          "pass": {
+                "rut": "12345678-9",
+                "clave": "tu_clave_sii"
+          }
+     }
+}
+
+response = requests.post(url, headers=headers, json=data)
+print(response.json())
+```
+
+#### PHP
+
+```php
+<?php
+$url = "https://api.aldored.com/sii/f22/2025";
 $headers = [
      "Authorization: Bearer TU_API_TOKEN",
      "Content-Type: application/json"
