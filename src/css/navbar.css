@@ -2,6 +2,13 @@
 .navbar {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  background-color: #2196f3 !important;
+  box-shadow: none;
+  border-bottom: none;
+  --ifm-navbar-background-color: #2196f3;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: rgba(255, 255, 255, 0.75);
+  --ifm-navbar-link-active-color: #ffffff;
 }
 
 /* Alinear contenido del navbar con el body */
@@ -12,7 +19,6 @@
   padding-right: var(--ifm-spacing-horizontal);
 }
 
-/* Marca más presente */
 .navbar__brand {
   display: inline-flex;
   align-items: center;
@@ -20,29 +26,92 @@
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: -0.01em;
-  color: var(--ifm-navbar-link-color);
+  color: #ffffff;
   text-decoration: none;
 }
 
 .navbar__brand:hover {
-  color: var(--ifm-color-primary);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .navbar__logo {
   height: 42px;
 }
 
-/* Links con un poco más de aire */
 .navbar__item {
   margin: 0 0.125rem;
 }
 
 .navbar__link {
   padding: 0.6rem 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
+  color: #ffffff;
 }
 
-/* Mobile: mantener toggle visible y brand centrada */
+.navbar__link:hover,
+.navbar__link--active {
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Toggle (hamburger) en blanco */
+.navbar__toggle {
+  color: #ffffff;
+}
+
+.navbar__toggle svg {
+  stroke: #ffffff;
+  fill: #ffffff;
+}
+
+/* Color de búsqueda si existe */
+.navbar__search-input {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar__search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Dropdown */
+.dropdown__menu {
+  background-color: #1976d2;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown__link {
+  color: #ffffff;
+}
+
+.dropdown__link:hover,
+.dropdown__link--active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Sidebar móvil */
+.navbar-sidebar {
+  background-color: #1976d2;
+}
+
+.navbar-sidebar__brand {
+  background-color: #2196f3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-sidebar__item .menu__link {
+  color: #ffffff;
+}
+
+.navbar-sidebar__item .menu__link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Mobile */
 @media (max-width: 996px) {
   .navbar__inner {
     position: relative;

@@ -8,7 +8,7 @@
 
 :root {
   /* Layout y navbar */
-  --ifm-container-width: 1180px;
+  --ifm-container-width: 1150px;
   --ifm-navbar-padding-horizontal: 1.5rem;
   /* Colores primarios - Azul */
   --ifm-color-primary: #2196f3; /* Azul primario */
@@ -27,6 +27,49 @@
 
   /* Espaciado */
   --ifm-spacing-horizontal: 1.5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #2196f3 !important;
+  padding: 3rem 2rem 2rem;
+}
+
+.footer .container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.footer__title {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 0.6875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.footer__item {
+  margin: 0.4rem 0;
+}
+
+.footer__link-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+}
+
+.footer__link-item:hover {
+  color: #ffffff !important;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8125rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 1.5rem;
+  text-align: left;
 }
 
 /* Ajustes para el modo oscuro */

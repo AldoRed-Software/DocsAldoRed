@@ -144,6 +144,10 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      disableSwitch: true,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: "AldoRed",
       /*logo: {
@@ -187,7 +191,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "light",
+      style: "dark",
       links: [
         {
           title: "Docs",
