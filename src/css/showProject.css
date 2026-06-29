@@ -8,16 +8,6 @@
   --shadow-color: rgba(0, 0, 0, 0.06);
 }
 
-/* Dark mode styles */
-[data-theme="dark"] {
-  --bg-primary: #21262d;
-  --bg-secondary: #21262d;
-  --text-primary: #c9d1d9;
-  --text-secondary: #ffffff;
-  --border-color: #30363d;
-  --bg-button-primary: #30363d;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-}
 
 .container-showProject {
   max-width: 800px;

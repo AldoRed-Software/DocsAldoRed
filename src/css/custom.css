@@ -6,6 +6,15 @@
 /* Importar estilos del navbar */
 @import url("./navbar.css");
 
+html {
+  background-color: #2196f3;
+}
+
+body,
+#__docusaurus {
+  background-color: #ffffff;
+}
+
 :root {
   /* Layout y navbar */
   --ifm-container-width: 1150px;
@@ -81,8 +90,36 @@
   width: 100%;
 }
 
-/* Ajustes para el modo oscuro */
-[data-theme="dark"] {
+/* Dark mode is disabled — force all variables back to light mode values */
+html[data-theme="dark"] {
+  color-scheme: light;
+  --ifm-color-scheme: light;
+
+  --ifm-color-emphasis-0: var(--ifm-color-gray-0);
+  --ifm-color-emphasis-100: var(--ifm-color-gray-100);
+  --ifm-color-emphasis-200: var(--ifm-color-gray-200);
+  --ifm-color-emphasis-300: var(--ifm-color-gray-300);
+  --ifm-color-emphasis-400: var(--ifm-color-gray-400);
+  --ifm-color-emphasis-500: var(--ifm-color-gray-500);
+  --ifm-color-emphasis-600: var(--ifm-color-gray-600);
+  --ifm-color-emphasis-700: var(--ifm-color-gray-700);
+  --ifm-color-emphasis-800: var(--ifm-color-gray-800);
+  --ifm-color-emphasis-900: var(--ifm-color-gray-900);
+  --ifm-color-emphasis-1000: var(--ifm-color-gray-1000);
+
+  --ifm-background-color: transparent;
+  --ifm-background-surface-color: var(--ifm-color-content-inverse);
+  --ifm-color-content: var(--ifm-color-emphasis-900);
+  --ifm-color-content-secondary: #525860;
+  --ifm-hover-overlay: rgba(0, 0, 0, 0.05);
+  --ifm-code-background: rgba(0, 0, 0, 0.06);
+  --ifm-breadcrumb-separator-filter: none;
+  --ifm-toc-border-color: var(--ifm-color-emphasis-300);
+  --ifm-scrollbar-track-background-color: #f1f1f1;
+  --ifm-scrollbar-thumb-background-color: #ccc;
+  --ifm-scrollbar-thumb-hover-background-color: #aaa;
+  --ifm-table-stripe-background: rgba(0, 0, 0, 0.03);
+
   --ifm-color-primary: #2196f3;
   --ifm-color-primary-dark: #1976d2;
   --ifm-color-primary-darker: #1565c0;
@@ -91,5 +128,5 @@
   --ifm-color-primary-lighter: #64b5f6;
   --ifm-color-primary-lightest: #90caf9;
 
-  --docusaurus-highlighted-code-line-bg: rgba(33, 150, 243, 0.2);
+  --docusaurus-highlighted-code-line-bg: rgba(33, 150, 243, 0.1);
 }

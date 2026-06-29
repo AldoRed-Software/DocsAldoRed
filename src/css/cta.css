@@ -5,12 +5,6 @@
   --cta-border: #e8e8e8;
 }
 
-[data-theme="dark"] {
-  --cta-bg: #111111;
-  --cta-text: #f2f2f2;
-  --cta-muted: #888888;
-  --cta-border: #222222;
-}
 
 .cta-section {
   padding: 5rem 2rem;

@@ -5,12 +5,6 @@
   --products-border: #e8e8e8;
 }
 
-[data-theme="dark"] {
-  --products-bg: #111111;
-  --products-text: #f2f2f2;
-  --products-muted: #888888;
-  --products-border: #222222;
-}
 
 .products-section {
   padding: 5rem 2rem;

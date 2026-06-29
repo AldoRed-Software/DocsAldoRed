@@ -10,17 +10,6 @@
   );
 }
 
-/* Dark mode styles */
-[data-theme="dark"] {
-  --logo-ticker-bg: #1b1b1d;
-  --logo-ticker-mask: linear-gradient(
-    to right,
-    transparent 0%,
-    white 15%,
-    white 85%,
-    transparent 100%
-  );
-}
 
 .logoTickerWrapper {
   padding-top: 2rem;

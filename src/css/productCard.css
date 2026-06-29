@@ -8,15 +8,6 @@
   --product-card-feature-dot: #2196f3;
 }
 
-[data-theme="dark"] {
-  --product-card-bg: #1a237e;
-  --product-card-border: #1565c0;
-  --product-card-text-primary: #64b5f6;
-  --product-card-text-secondary: #b0bec5;
-  --product-card-icon-color: #64b5f6;
-  --product-card-hover-border: #42a5f5;
-  --product-card-feature-dot: #2196f3;
-}
 
 .product-card {
   background-color: var(--product-card-bg);

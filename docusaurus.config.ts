@@ -51,7 +51,7 @@ const config: Config = {
           },
           theme: "solarized", // Otros temas: "alternate", "default", "moon", "purple", "solarized"
           layout: "modern", // "classic" o "modern"
-          darkMode: true,
+          darkMode: false,
           showSidebar: true,
           hideDownloadButton: false,
           customCss: `
@@ -146,7 +146,7 @@ const config: Config = {
   themeConfig: {
     colorMode: {
       disableSwitch: true,
-      respectPrefersColorScheme: true,
+      defaultMode: "light",
     },
     navbar: {
       title: "AldoRed",
