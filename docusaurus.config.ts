@@ -126,6 +126,14 @@ const config: Config = {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
+        // Publicaciones de comunidad enlazadas desde «AldoRed, contigo».
+        blog: {
+          blogTitle: "AldoRed, contigo",
+          blogDescription: "Historias, auspicios y colaboraciones de AldoRed con su comunidad.",
+          blogSidebarTitle: "Nuestras historias",
+          blogSidebarCount: "ALL",
+          showReadingTime: true,
+        },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -160,6 +168,11 @@ const config: Config = {
           target: "_self",
           position: "right",
           className: "navbar-login",
+        },
+        {
+          label: "AldoRed, contigo",
+          to: "/blog",
+          position: "left",
         },
         {
           type: "docSidebar",

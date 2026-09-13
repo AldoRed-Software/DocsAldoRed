@@ -1,4 +1,5 @@
 import React from "react";
+import { CommunityHighlights } from "@site/src/components/CommunityHighlights";
 import Link from "@docusaurus/Link";
 import {
   SolutionIcon,
@@ -101,39 +102,7 @@ export const Hero = () => (
           </div>
         </div>
 
-        <aside className="hero-aside" aria-label="Trabajemos juntos">
-          <p className="panel-label">AldoRed, contigo</p>
-          <div className="hero-side-card">
-            <div>
-              <h2>Tu próximo proyecto empieza aquí.</h2>
-              <p>Cuéntanos qué necesitas mejorar en tu empresa.</p>
-              <a
-                href="mailto:contacto@aldored.com"
-                className="side-card-button"
-              >
-                Hablar sobre mi proyecto
-              </a>
-            </div>
-            <span className="side-card-icon" aria-hidden="true">
-              <SolutionIcon kind="code" />
-            </span>
-          </div>
-          <div className="hero-side-card">
-            <div>
-              <h2>Da el siguiente paso con confianza.</h2>
-              <p>Asesoría en software, cloud y evaluación de proyectos.</p>
-              <Link
-                to="/docs/asesorias-consultorias"
-                className="side-card-button"
-              >
-                Conocer las asesorías
-              </Link>
-            </div>
-            <span className="side-card-icon" aria-hidden="true">
-              <SolutionIcon kind="layers" />
-            </span>
-          </div>
-        </aside>
+        <CommunityHighlights />
       </div>
     </div>
   </section>

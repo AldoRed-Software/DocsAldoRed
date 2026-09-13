@@ -1,0 +1,60 @@
+.hero-aside .panel-label a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+}
+.community-stories { display: grid; gap: 20px; }
+.community-card {
+  overflow: hidden;
+  border: 1px solid #e6e8eb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 22px #162c4114;
+}
+.community-card-link { display: block; color: #142b40; }
+.community-card-link:hover { color: #142b40; text-decoration: none; }
+.community-card-link > img { display: block; width: 100%; }
+.community-image-team { height: 156px; object-fit: cover; object-position: center 57%; }
+.community-image-logo { height: 92px; object-fit: contain; padding: 20px; background: #edf6fd; }
+.community-card-copy { padding: 20px 22px; }
+.community-card-copy .community-category {
+  font-size: 12px;
+  color: #096bb0;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+.aldored-landing .community-card-copy h3 {
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+.community-card-copy > p:not(.community-category) {
+  color: #626970;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.community-read { display: flex; justify-content: space-between; color: #096bb0; font-size: 13px; font-weight: 600; }
+.community-card-link:hover .community-read { text-decoration: underline; text-underline-offset: 3px; }
+.community-all { display: inline-block; margin-top: 16px; color: #096bb0; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.community-article-photo { margin: 28px 0; }
+.community-article-photo img { display: block; width: 100%; max-width: 480px; height: auto; border-radius: 12px; }
+.community-article-photo figcaption { max-width: 480px; font-size: 14px; color: #526477; margin-top: 10px; }
+.community-article-gallery { display: grid; gap: 24px; margin: 28px 0; }
+.community-article-gallery figure { margin: 0; min-width: 0; }
+.community-article-gallery img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.community-article-gallery figcaption { margin-top: 10px; font-size: 14px; color: #526477; }
+.community-article-logo { background: #edf6fd; padding: 32px; border-radius: 12px; margin: 28px 0; }
+.community-article-logo img { display: block; max-width: 240px; width: 100%; height: auto; margin: auto; }
+.community-article-video { margin: 28px 0; }
+.community-article-video video { display: block; width: 100%; max-height: 70vh; border-radius: 12px; background: #142b40; }
+.community-article-video figcaption { font-size: 14px; color: #526477; margin-top: 10px; }
+.community-editorial { margin: 24px 0; padding: 24px; border-left: 4px solid #2196f3; border-radius: 0 12px 12px 0; background: #edf6fd; color: #142b40; }
+.community-editorial .community-editorial-label { color: #096bb0; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.community-editorial h3 { margin-bottom: 12px; }
+.community-editorial a { color: #096bb0; font-weight: 600; }
+@media (max-width: 760px) {
+  .community-image-team { height: 180px; }
+}
