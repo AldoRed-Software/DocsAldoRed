@@ -24,6 +24,14 @@ const stories = [
   },
 ];
 
+function CommunityArrow() {
+  return (
+    <svg className="community-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+  );
+}
+
 const StoryCard: React.FC<{ story: (typeof stories)[number] }> = ({ story }) => {
   const imageUrl = useBaseUrl(story.image);
   return (
@@ -34,7 +42,7 @@ const StoryCard: React.FC<{ story: (typeof stories)[number] }> = ({ story }) => 
           <p className="community-category">{story.category}</p>
           <h3>{story.title}</h3>
           <p>{story.description}</p>
-          <span className="community-read">Leer historia <span aria-hidden="true">↗</span></span>
+          <span className="community-read">Leer historia <CommunityArrow /></span>
         </div>
       </Link>
     </article>
@@ -45,7 +53,7 @@ export function CommunityHighlights() {
   return (
     <aside className="hero-aside" aria-labelledby="community-heading">
       <h2 className="panel-label" id="community-heading">
-        <Link to="/blog">AldoRed, contigo <span aria-hidden="true">↗</span></Link>
+        <Link to="/blog">AldoRed, contigo <CommunityArrow /></Link>
       </h2>
       <div className="community-stories">
         {stories.map(story => <StoryCard key={story.url} story={story} />)}

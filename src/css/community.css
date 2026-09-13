@@ -1,7 +1,7 @@
 .hero-aside .panel-label a {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
   color: inherit;
 }
 .community-stories { display: grid; gap: 20px; }
@@ -36,7 +36,8 @@
   line-height: 1.5;
   margin: 0 0 12px;
 }
-.community-read { display: flex; justify-content: space-between; color: #096bb0; font-size: 13px; font-weight: 600; }
+.community-read { display: flex; align-items: center; justify-content: space-between; color: #096bb0; font-size: 13px; font-weight: 600; }
+.hero-aside .community-arrow { display: block; width: 20px; height: 20px; flex-shrink: 0; }
 .community-card-link:hover .community-read { text-decoration: underline; text-underline-offset: 3px; }
 .community-all { display: inline-block; margin-top: 16px; color: #096bb0; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
 .community-article-photo { margin: 28px 0; }
