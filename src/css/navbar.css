@@ -14,21 +14,19 @@
 }
 
 .navbar__brand {
-  color: #142b40;
-  font-size: 26px;
-  letter-spacing: -.045em;
   margin-right: 40px;
+  color: #142b40;
 }
 
-.navbar__brand::before {
-  content: '';
-  display: inline-block;
-  width: 12px;
-  height: 25px;
-  background: #2196f3;
-  border-radius: 3px;
-  margin-right: 10px;
-  transform: skewY(-15deg);
+.navbar__logo {
+  height: 32px;
+  margin-right: 0;
+}
+
+.navbar__logo img {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 .navbar__link {
@@ -107,8 +105,43 @@
     padding: 0 22px;
   }
   .navbar__brand {
-    margin-left: 12px;
+    margin-left: 0;
     margin-right: 0;
+  }
+  /* Flatten the left group so the mobile toggle follows the login group. */
+  .navbar__inner {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .navbar__inner > .navbar__items:not(.navbar__items--right) {
+    display: contents;
+  }
+  .navbar__inner > .navbar__items > .navbar__brand {
+    order: 0;
+    margin-right: auto;
+  }
+  .navbar__inner > .navbar__items--right {
+    order: 1;
+    flex: 0 0 auto;
+    padding: 0;
+  }
+  .navbar__inner .navbar-login {
+    margin-left: 0;
+  }
+  .navbar__inner .navbar__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 8px;
+  }
+  .navbar__logo {
+    height: 28px;
   }
   .navbar__toggle {
     color: #142b40;
@@ -143,4 +176,18 @@ body:has(.aldored-landing) .navbar a:focus-visible { outline-color: #2196f3; }
 .navbar-login svg { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .navbar-login { transition: none; }
+}
+
+/* Use the exact same letter outlines on light and dark navigation surfaces. */
+body:has(.aldored-landing) .navbar__logo img {
+  filter: brightness(0) invert(1);
+}
+body:has(.aldored-landing) .navbar-sidebar .navbar__logo img {
+  filter: none;
+}
+
+@media (max-width: 360px) {
+  .navbar { padding-inline: 16px; }
+  .navbar__logo { height: 24px; }
+  .navbar__inner .navbar-login { padding-inline: 14px; }
 }

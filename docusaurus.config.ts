@@ -149,11 +149,10 @@ const config: Config = {
       defaultMode: "light",
     },
     navbar: {
-      title: "AldoRed",
-      /*logo: {
-        alt: "Main Logo of AldoRed",
-        src: "img/logo.png",
-        },*/
+      logo: {
+        alt: "AldoRed",
+        src: "img/aldored-wordmark.svg",
+      },
       items: [
         {
           label: "Login",

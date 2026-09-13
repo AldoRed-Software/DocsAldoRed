@@ -45,14 +45,22 @@
   text-decoration: none;
 }
 
-.landing-button-primary {
-  background: var(--brand);
-  color: #082940;
+/* Darker brand blue keeps white labels readable on every primary action. */
+.landing-button.landing-button-primary,
+.landing-button.landing-button-primary:visited {
+  background-color: #096bb0;
+  color: #ffffff;
 }
 
-.landing-button-primary:hover {
-  background: #64b5f6;
-  color: #082940;
+.landing-button.landing-button-primary:hover,
+.landing-button.landing-button-primary:focus-visible {
+  background-color: #07558d;
+  color: #ffffff;
+}
+
+.landing-button.landing-button-primary:active {
+  background-color: #064570;
+  color: #ffffff;
 }
 
 .landing-button-secondary {
