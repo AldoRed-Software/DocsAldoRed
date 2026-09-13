@@ -41,17 +41,29 @@
   color: #096bb0;
 }
 
-.navbar-contact {
-  color: #082940;
-  background: #2196f3;
-  border-radius: 4px;
-  padding: 11px 20px;
+.navbar-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  color: #142b40;
+  background: transparent;
+  border: 1px solid #b9cbd9;
+  border-radius: 6px;
+  padding: 8px 20px;
   margin-left: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease;
 }
 
-.navbar-contact:hover {
-  background: #64b5f6;
-  color: #082940;
+.navbar-login:hover {
+  background: #edf6fd;
+  border-color: #7194b0;
+  color: #142b40;
 }
 
 .dropdown__menu {
@@ -80,7 +92,7 @@
   box-shadow: 0 1px 0 #dce8f1;
 }
 
-.navbar-sidebar .navbar-contact {
+.navbar-sidebar .navbar-login {
   margin-left: 0;
 }
 
@@ -114,16 +126,21 @@ body:has(.aldored-landing) .navbar {
 body:has(.aldored-landing) .navbar__brand,
 body:has(.aldored-landing) .navbar__link,
 body:has(.aldored-landing) .navbar__toggle { color: #fff; }
-body:has(.aldored-landing) .navbar-contact {
-  background: #fff;
-  color: #104a78;
-  border: 1px solid #fff;
-  text-transform: uppercase;
-  letter-spacing: .025em;
-  font-size: 12px;
-  padding: 13px 22px;
+body:has(.aldored-landing) .navbar-login {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, .55);
 }
-body:has(.aldored-landing) .navbar-contact:hover { background: #edf6fd; }
+body:has(.aldored-landing) .navbar-login:hover {
+  background: rgba(255, 255, 255, .1);
+  border-color: #fff;
+}
 body:has(.aldored-landing) .navbar-sidebar .navbar__brand { color: #142b40; }
-body:has(.aldored-landing) .navbar-sidebar .navbar-contact { color: #104a78; border-color: #bfc6cc; }
+body:has(.aldored-landing) .navbar-sidebar .navbar-login { color: #104a78; border-color: #bfc6cc; }
 body:has(.aldored-landing) .navbar a:focus-visible { outline-color: #2196f3; }
+
+/* Login stays in the same tab, so an external-window icon is unnecessary. */
+.navbar-login svg { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .navbar-login { transition: none; }
+}

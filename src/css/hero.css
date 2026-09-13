@@ -165,19 +165,6 @@
   background: #edf6fd;
   text-decoration: none;
 }
-.solution-row-icon {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  color: #082940;
-  background: #2196f3;
-}
-.solution-row:nth-child(2) .solution-row-icon { background: #d6eafd; }
-.solution-row:nth-child(3) .solution-row-icon { background: #104a78; color: white; }
-.solution-row:nth-child(4) .solution-row-icon { background: #e4f2f4; }
 .solution-row-copy { min-width: 0; }
 .solution-row-copy strong {
   display: block;
@@ -276,7 +263,6 @@
   .hero-side-card { padding: 24px; }
   .side-card-icon { display: grid; }
   .solution-row { gap: 12px; }
-  .solution-row-icon { width: 42px; height: 42px; }
   .solution-row-copy strong { font-size: 16px; }
   .solution-row-arrow { padding-left: 0; }
   .solutions-panel-footer { padding: 18px 24px; }

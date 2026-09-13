@@ -1,0 +1,50 @@
+.solution-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: #f0f7fd;
+  color: #096bb0;
+}
+.solution-logo img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+.solution-logo--folder,
+.solution-logo--calendar {
+  background: transparent;
+}
+.solution-logo > .solution-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  stroke-width: 1.8;
+}
+.solution-logo--code {
+  color: #fff;
+  background: #104a78;
+}
+.solution-card > .solution-logo {
+  margin-bottom: 24px;
+}
+@media (max-width: 760px) {
+  .solution-row .solution-logo {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+  }
+  .solution-row .solution-logo img {
+    width: 48px;
+    height: 48px;
+  }
+  .solution-row .solution-logo > .solution-icon {
+    width: 27px;
+    height: 27px;
+  }
+}

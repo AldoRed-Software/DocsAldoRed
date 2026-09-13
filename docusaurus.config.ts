@@ -155,8 +155,7 @@ const config: Config = {
         src: "img/logo.png",
         },*/
       items: [
-        { label: "Precios", to: "/precios", position: "right" },
-        { label: "Conversemos", href: "mailto:aldo@aldored.com", position: "right", className: "navbar-contact" },
+        { label: "Login", href: "https://intranet.aldored.com", target: "_self", position: "right", className: "navbar-login" },
         {
           type: "docSidebar",
           sidebarId: "docs",
@@ -217,10 +216,6 @@ const config: Config = {
             {
               label: "API Reference",
               to: "/api",
-            },
-            {
-              label: "Precios",
-              to: "/precios",
             },
           ],
         },

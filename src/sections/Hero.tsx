@@ -2,6 +2,7 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import { SolutionIcon, type SolutionKind } from "@site/src/components/SolutionIcon";
 import "@site/src/css/hero.css";
+import { SolutionLogo } from "@site/src/components/SolutionLogo";
 
 const solutions: { name: string; description: string; url: string; icon: SolutionKind }[] = [
   { name: "Fidato", description: "Organiza la documentación de tus proyectos", url: "/docs/fidato", icon: "folder" },
@@ -29,7 +30,7 @@ export const Hero = () => (
             <div className="solutions-list">
               {solutions.map(solution => (
                 <Link to={solution.url} className="solution-row" key={solution.name}>
-                  <span className="solution-row-icon"><SolutionIcon kind={solution.icon} /></span>
+                  <SolutionLogo kind={solution.icon} />
                   <span className="solution-row-copy">
                     <strong>{solution.name}</strong>
                     <span>{solution.description}</span>

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import { SolutionIcon, type SolutionKind } from "@site/src/components/SolutionIcon";
 import "@site/src/css/products.css";
+import { SolutionLogo } from "@site/src/components/SolutionLogo";
 
 const products: { title: string; category: string; description: string; url: string; kind: SolutionKind; features: string[] }[] = [
   { title: "Fidato", category: "Gestión documental", description: "Mantén la documentación de tus proyectos organizada y disponible para tu equipo en un solo lugar.", url: "/docs/fidato", kind: "folder", features: ["Documentos centralizados", "Acceso en la nube"] },
@@ -31,7 +32,7 @@ export const Products = () => (
       </article>
       <div className="products-grid">
         {products.map(product => <article className="solution-card" key={product.title}>
-          <div className="product-icon"><SolutionIcon kind={product.kind} /></div>
+          <SolutionLogo kind={product.kind} />
           <p className="product-category">{product.category}</p>
           <h3>{product.title}</h3><p className="product-description">{product.description}</p>
           <ul className="product-features">{product.features.map(feature => <li key={feature}><span aria-hidden="true">✓</span>{feature}</li>)}</ul>
