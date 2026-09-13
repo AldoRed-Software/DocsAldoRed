@@ -27,9 +27,9 @@ const solutions: {
     icon: "calendar",
   },
   {
-    name: "API para SII",
+    name: "API soluciones RPA",
     description: "Automatiza la información del SII en tus sistemas",
-    url: "/api",
+    url: "/docs/api-sii",
     icon: "code",
   },
   {
@@ -41,7 +41,7 @@ const solutions: {
   },
   {
     name: "Carta AldoRed",
-    description: "Gestiona las comandas de tu restaurante",
+    description: "En construcción · Gestión de comandas para tu restaurante",
     url: "/docs/carta",
     icon: "menu",
   },

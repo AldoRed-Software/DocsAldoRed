@@ -24,7 +24,7 @@
 }
 
 .navbar__logo img {
-  display: block;
+  /* Docusaurus controls display to hide the inactive theme logo before hydration. */
   width: auto;
   height: 100%;
 }

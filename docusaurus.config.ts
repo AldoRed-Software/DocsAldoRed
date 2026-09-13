@@ -190,8 +190,8 @@ const config: Config = {
               to: "/docs/reservas",
             },
             {
-              label: "API para SII",
-              to: "/api",
+              label: "API soluciones RPA",
+              to: "/docs/api-sii",
             },
             {
               label: "Fidato",

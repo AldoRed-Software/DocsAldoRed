@@ -1,8 +1,15 @@
 ---
 sidebar_position: 2
-title: API SII
-description: Centro de documentación completo del sistema API SII con funcionalidades avanzadas y API REST.
+title: API soluciones RPA
+description: Documentación de API soluciones RPA de AldoRed para automatizar tareas e integrar información del SII.
 slug: /api-sii
 ---
 
-# Sistema API SII
+# API soluciones RPA
+
+
+Automatiza la obtención de información del SII e intégrala en tus sistemas.
+
+**[Acceder a API soluciones RPA](https://api.aldored.com)**
+
+Consulta la [referencia de la API](/api) para conocer los endpoints y ejemplos de integración.

@@ -6,3 +6,6 @@ slug: /fidato
 ---
 
 # Sistema Fidato
+
+
+**[Acceder a Fidato](https://fidato.aldored.com)**

@@ -7,7 +7,7 @@ import { SolutionLogo } from "@site/src/components/SolutionLogo";
 const products: { title: string; category: string; description: string; url: string; kind: SolutionKind; features: string[] }[] = [
   { title: "Fidato", category: "Gestión documental", description: "Mantén la documentación de tus proyectos organizada y disponible para tu equipo en un solo lugar.", url: "/docs/fidato", kind: "folder", features: ["Documentos centralizados", "Acceso en la nube"] },
   { title: "Reservas AldoRed", category: "Coordinación de equipos", description: "Gestiona salas y reuniones sin cruces de horarios, con calendarios y notificaciones conectados.", url: "/docs/reservas", kind: "calendar", features: ["Integración con Google Calendar", "Notificaciones por WhatsApp"] },
-  { title: "API para SII", category: "Automatización", description: "Integra la obtención de información del SII en tus sistemas y reduce las tareas manuales de tu operación.", url: "/api", kind: "code", features: ["Integración vía API", "Documentación para desarrolladores"] },
+  { title: "API soluciones RPA", category: "Automatización", description: "Integra la obtención de información del SII en tus sistemas y reduce las tareas manuales de tu operación.", url: "/docs/api-sii", kind: "code", features: ["Integración vía API", "Documentación para desarrolladores"] },
 ];
 export const Products = () => (
   <section className="products-section" id="productos" aria-labelledby="products-heading">
@@ -39,7 +39,7 @@ export const Products = () => (
           <Link to={product.url} className="product-link">Conocer {product.title}<span aria-hidden="true">↗</span></Link>
         </article>)}
       </div>
-      <div className="restaurant-solution"><div className="restaurant-copy"><SolutionIcon kind="menu" /><div><h3>¿Tu negocio es un restaurante?</h3><p>Con Carta AldoRed, gestiona comandas desde el celular y coordina tu operación desde el computador.</p></div></div><Link to="/docs/carta" className="product-link">Conocer Carta AldoRed <span aria-hidden="true">↗</span></Link></div>
+      <div className="restaurant-solution"><div className="restaurant-copy"><SolutionIcon kind="menu" /><div><h3>¿Tu negocio es un restaurante?</h3><p>Carta AldoRed está en construcción: una solución para gestionar comandas desde el celular y coordinar tu restaurante.</p></div></div><Link to="/docs/carta" className="product-link">Conocer Carta AldoRed <span aria-hidden="true">↗</span></Link></div>
     </div>
   </section>
 );

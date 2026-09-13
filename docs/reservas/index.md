@@ -9,6 +9,8 @@ slug: /reservas
 
 Bienvenido a la documentación completa del **Sistema de Reservas de Salas de Reuniones** con arquitectura multi-tenant, autenticación Google OAuth y funcionalidades avanzadas.
 
+**[Acceder a Reservas AldoRed](https://reservas.aldored.com)**
+
 ## ¿Qué es este Sistema?
 
 Un sistema completo de gestión de reservas de salas de reuniones que proporciona:

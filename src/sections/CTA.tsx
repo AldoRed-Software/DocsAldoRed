@@ -21,6 +21,7 @@ export const CTA = () => (
             proyectos, diseñar soluciones en la nube y desarrollar el software
             que tu operación necesita.
           </p>
+          <p><strong>Plan de consultoría con costo fijo desde UF 7,5/mes.</strong></p>
           <Link to="/docs/asesorias-consultorias" className="product-link">
             Conocer nuestras asesorías <span aria-hidden="true">↗</span>
           </Link>
