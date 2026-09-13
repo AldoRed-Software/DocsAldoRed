@@ -155,6 +155,8 @@ const config: Config = {
         src: "img/logo.png",
         },*/
       items: [
+        { label: "Precios", to: "/precios", position: "right" },
+        { label: "Conversemos", href: "mailto:aldo@aldored.com", position: "right", className: "navbar-contact" },
         {
           type: "docSidebar",
           sidebarId: "docs",
@@ -181,6 +183,10 @@ const config: Config = {
             {
               label: "Asesorías y Consultorías",
               to: "/docs/asesorias-consultorias",
+            },
+            {
+              label: "Administración tecnológica",
+              to: "/docs/administracion-tecnologica",
             },
             {
               label: "Carta AldoRed",
