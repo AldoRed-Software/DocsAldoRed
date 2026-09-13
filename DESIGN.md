@@ -8,17 +8,17 @@ Una empresa de software cercana y seria. Presentar con claridad qué resuelve ca
 
 ## Paleta
 
-| Token | Valor | Uso |
-| --- | --- | --- |
-| Brand | `#2196f3` | Acciones principales, símbolo de marca y acentos |
-| Ink | `#142b40` | Títulos y texto principal |
-| Deep blue | `#123c60` | Franjas invertidas y cabecera del mapa de soluciones |
-| Wash | `#edf6fd` | Superficies secundarias e iconos |
-| Canvas | `#ffffff` | Navegación y sección de productos |
-| Hero canvas | `#f7fbfe` | Fondo de la introducción |
-| Muted | `#526477` | Texto secundario |
-| Line | `#c9e2f6` | Bordes de tarjetas |
-| Link | `#096bb0` | Enlaces de texto sobre fondos claros |
+| Token       | Valor     | Uso                                                  |
+| ----------- | --------- | ---------------------------------------------------- |
+| Brand       | `#2196f3` | Acciones principales, símbolo de marca y acentos     |
+| Ink         | `#142b40` | Títulos y texto principal                            |
+| Deep blue   | `#123c60` | Franjas invertidas y cabecera del mapa de soluciones |
+| Wash        | `#edf6fd` | Superficies secundarias e iconos                     |
+| Canvas      | `#ffffff` | Navegación y sección de productos                    |
+| Hero canvas | `#f7fbfe` | Fondo de la introducción                             |
+| Muted       | `#526477` | Texto secundario                                     |
+| Line        | `#c9e2f6` | Bordes de tarjetas                                   |
+| Link        | `#096bb0` | Enlaces de texto sobre fondos claros                 |
 
 El azul principal sustituye al morado de Slack. Utilizar azul oscuro para las grandes superficies invertidas. Los botones #2196f3 llevan texto #082940 para mantener contraste legible; no usar texto blanco pequeño sobre este azul. No usar degradados ni sombras de texto.
 
@@ -56,7 +56,7 @@ La pieza visual distintiva es el panel de soluciones que se superpone al fondo c
 - Panel de soluciones y tarjetas laterales: blancos, radio 16px y sombra suave.
 - Iconos: SVG de trazo consistente; decorativos y ocultos a lectores de pantalla.
 - Secciones: 80–96px de espacio vertical en escritorio y 54–60px en móvil.
-- Contacto: correo real `aldo@aldored.com`, sin formularios que no envíen datos.
+- Contacto: correo real `contacto@aldored.com`, sin formularios que no envíen datos.
 
 ## Adaptación y accesibilidad
 

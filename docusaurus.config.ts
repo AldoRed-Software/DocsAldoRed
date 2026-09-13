@@ -109,7 +109,7 @@ const config: Config = {
               ---
               
               **Autenticación**: \`Authorization: Bearer tu_token\`  
-              **Soporte**: aldo@aldored.com
+              **Soporte**: contacto@aldored.com
             `,
           },
         },
@@ -155,7 +155,13 @@ const config: Config = {
         src: "img/logo.png",
         },*/
       items: [
-        { label: "Login", href: "https://intranet.aldored.com", target: "_self", position: "right", className: "navbar-login" },
+        {
+          label: "Login",
+          href: "https://intranet.aldored.com",
+          target: "_self",
+          position: "right",
+          className: "navbar-login",
+        },
         {
           type: "docSidebar",
           sidebarId: "docs",

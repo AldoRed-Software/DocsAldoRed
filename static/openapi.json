@@ -2,11 +2,11 @@
   "openapi": "3.0.3",
   "info": {
     "title": "AldoRed RPA Contable API",
-    "description": "# AldoRed RPA Contable API\n\nAPI para automatización de procesos contables con integración al SII (Servicio de Impuestos Internos) de Chile. RPA contable segura con proxy SSL y contenedores aislados.\n\n## Importante: Pruebas de la API\n\n**Los ejemplos del navegador pueden fallar por CORS.** Esto es normal y no indica un problema con la API.\n\n### Formas recomendadas de probar:\n\n1. **Postman** - Importa este archivo OpenAPI\n2. **cURL** - Usa los ejemplos de cada endpoint\n3. **Tu aplicación** - Funciona perfectamente desde aplicaciones reales\n\n### Autenticación\n\nTodos los endpoints requieren un Bearer token:\n```\nAuthorization: Bearer tu_token_aqui\n```\n\n### Soporte\n\n¿Problemas? Escríbenos a: aldo@aldored.com",
+    "description": "# AldoRed RPA Contable API\n\nAPI para automatización de procesos contables con integración al SII (Servicio de Impuestos Internos) de Chile. RPA contable segura con proxy SSL y contenedores aislados.\n\n## Importante: Pruebas de la API\n\n**Los ejemplos del navegador pueden fallar por CORS.** Esto es normal y no indica un problema con la API.\n\n### Formas recomendadas de probar:\n\n1. **Postman** - Importa este archivo OpenAPI\n2. **cURL** - Usa los ejemplos de cada endpoint\n3. **Tu aplicación** - Funciona perfectamente desde aplicaciones reales\n\n### Autenticación\n\nTodos los endpoints requieren un Bearer token:\n```\nAuthorization: Bearer tu_token_aqui\n```\n\n### Soporte\n\n¿Problemas? Escríbenos a: contacto@aldored.com",
     "version": "1.4.0",
     "contact": {
       "name": "AldoRed Support",
-      "email": "aldo@aldored.com",
+      "email": "contacto@aldored.com",
       "url": "https://aldored.com"
     },
     "license": {

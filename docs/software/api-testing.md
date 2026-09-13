@@ -481,7 +481,7 @@ Si sigues teniendo problemas:
 1. **Verifica tu API token**: Asegúrate de que está activo en tu plan
 2. **Revisa el rate-limit**: Cada plan tiene límites por minuto
 3. **Valida el formato**: RUT debe incluir guión y dígito verificador
-4. **Contacta soporte**: [aldo@aldored.com](mailto:aldo@aldored.com)
+4. **Contacta soporte**: [contacto@aldored.com](mailto:contacto@aldored.com)
 
 ## Códigos de respuesta
 

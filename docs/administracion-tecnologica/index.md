@@ -21,4 +21,4 @@ Nos encargamos por completo de la administración tecnológica de tu software en
 
 Cuéntanos qué software utilizas en la nube y cómo está organizado tu correo empresarial. Revisamos tus necesidades y te proponemos el alcance del servicio para tu empresa.
 
-[Consultar por administración tecnológica](mailto:aldo@aldored.com?subject=Consulta%20por%20administraci%C3%B3n%20tecnol%C3%B3gica)
+[Consultar por administración tecnológica](mailto:contacto@aldored.com?subject=Consulta%20por%20administraci%C3%B3n%20tecnol%C3%B3gica)

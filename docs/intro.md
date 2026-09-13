@@ -9,7 +9,7 @@ Bienvenido a la documentación oficial de AldoRed. Aquí encontrarás todo lo ne
 ### Cómo avanzar rápido
 
 - **Explora la documentación:** visita las secciones de productos y guías prácticas para comenzar en minutos.
-- **Habla con nosotros:** si quieres conversar sobre tu proyecto, escribe a [aldo@aldored.com](mailto:aldo@aldored.com?subject=Quiero%20conocer%20sus%20soluciones) o usa el botón “Conversemos” en la página de inicio.
+- **Habla con nosotros:** si quieres conversar sobre tu proyecto, escribe a [contacto@aldored.com](mailto:contacto@aldored.com?subject=Quiero%20conocer%20sus%20soluciones) o usa el botón “Conversemos” en la página de inicio.
 - **Descarga y prueba:** revisa las notas de lanzamiento y ejemplos para validar integraciones de forma ágil.
 
 ### Secciones clave
@@ -23,4 +23,4 @@ Bienvenido a la documentación oficial de AldoRed. Aquí encontrarás todo lo ne
 
 ### ¿Necesitas ayuda?
 
-Contáctanos en [aldo@aldored.com](mailto:aldo@aldored.com?subject=Quiero%20conocer%20sus%20soluciones) y cuéntanos qué necesitas optimizar. Estamos listos para acompañarte en la implementación.
+Contáctanos en [contacto@aldored.com](mailto:contacto@aldored.com?subject=Quiero%20conocer%20sus%20soluciones) y cuéntanos qué necesitas optimizar. Estamos listos para acompañarte en la implementación.
