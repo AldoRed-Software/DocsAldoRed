@@ -1,6 +1,6 @@
 # AldoRed — Guía de diseño
 
-Profesional, limpio y minimalista. Fondo blanco, texto azul tinta y un solo acento: **#0E9AFF**. El orden lo dan el espacio generoso, la tipografía y las líneas finas, no los colores de fondo ni las sombras.
+Profesional, limpio y minimalista. Fondo blanco, texto azul tinta y un solo acento: **#0E9AFF**. El orden lo dan el espacio generoso, la tipografía y las líneas finas, no los colores de fondo ni las sombras. Sin franjas oscuras: toda la página se mantiene clara.
 
 ## Dirección
 
@@ -14,10 +14,9 @@ Los valores viven como tokens `--ar-*` en `src/css/custom.css`.
 | ------------- | --------- | ---------------------------------------------------------- |
 | Brand         | `#0E9AFF` | Acciones principales, iconos y acentos                     |
 | Brand hover   | `#0085e5` | Estado hover de las acciones principales                   |
-| Brand tint    | `#eaf5ff` | Fondo de los iconos de producto                            |
+| Brand tint    | `#eaf5ff` | Fondo de los iconos de producto y del panel de contacto    |
 | Link          | `#096bb0` | Enlaces de texto y etiquetas sobre fondos claros           |
 | Ink           | `#142b40` | Títulos y texto principal                                  |
-| Night         | `#0b1f33` | Franja de contacto, la única superficie oscura             |
 | Muted         | `#526477` | Texto secundario                                           |
 | Surface       | `#f7fafc` | Sección de servicios                                       |
 | Hairline      | `#e6edf3` | Bordes de tarjetas y separadores                           |
@@ -43,7 +42,7 @@ Hero        · eyebrow mono, titular grande, un botón y el correo | precio dest
 Soluciones  · tres tarjetas (Fidato, Reservas, API RPA) + fila punteada de Carta AldoRed
 Servicios   · fondo Surface · Administración tecnológica | Asesorías, con precio
 Comunidad   · historias como filas de texto separadas por líneas
-Contacto    · fondo Night · titular a la izquierda, acciones a la derecha
+Contacto    · panel Brand tint, radio 16px · titular a la izquierda, acciones a la derecha
 Pie         · Soluciones / Servicios / Recursos / Empresa
 ```
 
