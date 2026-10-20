@@ -1,7 +1,7 @@
 .navbar {
   --ifm-navbar-background-color: #fff;
-  --ifm-navbar-link-color: #142b40;
-  --ifm-navbar-link-hover-color: #096bb0;
+  --ifm-navbar-link-color: var(--ar-ink);
+  --ifm-navbar-link-hover-color: var(--ar-link);
   height: 80px;
   padding: 0 32px;
   background: #fff;
@@ -15,7 +15,7 @@
 
 .navbar__brand {
   margin-right: 40px;
-  color: #142b40;
+  color: var(--ar-ink);
 }
 
 .navbar__logo {
@@ -36,7 +36,7 @@
 }
 
 .navbar__link:hover, .navbar__link--active {
-  color: #096bb0;
+  color: var(--ar-link);
 }
 
 .navbar-login {
@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   min-height: 40px;
-  color: #142b40;
+  color: var(--ar-ink);
   background: transparent;
   border: 1px solid #b9cbd9;
   border-radius: 6px;
@@ -59,9 +59,9 @@
 }
 
 .navbar-login:hover {
-  background: #edf6fd;
+  background: var(--ar-wash);
   border-color: #7194b0;
-  color: #142b40;
+  color: var(--ar-ink);
 }
 
 .dropdown__menu {
@@ -72,14 +72,14 @@
 }
 
 .dropdown__link {
-  color: #142b40;
+  color: var(--ar-ink);
   font-size: 14px;
   padding: 10px 12px;
 }
 
 .dropdown__link:hover, .dropdown__link--active {
-  color: #096bb0;
-  background: #edf6fd;
+  color: var(--ar-link);
+  background: var(--ar-wash);
 }
 
 .navbar-sidebar {
@@ -95,7 +95,7 @@
 }
 
 .navbar a:focus-visible {
-  outline: 3px solid #096bb0;
+  outline: 3px solid var(--ar-link);
   outline-offset: 4px;
 }
 
@@ -144,14 +144,14 @@
     height: 28px;
   }
   .navbar__toggle {
-    color: #142b40;
+    color: var(--ar-ink);
   }
 }
 
 /* Landing navigation shares the hero stage; documentation keeps its light header. */
 body:has(.aldored-landing) .navbar {
-  background: #104a78;
-  --ifm-navbar-background-color: #104a78;
+  background: var(--ar-stage);
+  --ifm-navbar-background-color: var(--ar-stage);
   --ifm-navbar-link-color: #fff;
   --ifm-navbar-link-hover-color: #cce7fc;
   box-shadow: none;
@@ -168,9 +168,9 @@ body:has(.aldored-landing) .navbar-login:hover {
   background: rgba(255, 255, 255, .1);
   border-color: #fff;
 }
-body:has(.aldored-landing) .navbar-sidebar .navbar__brand { color: #142b40; }
-body:has(.aldored-landing) .navbar-sidebar .navbar-login { color: #104a78; border-color: #bfc6cc; }
-body:has(.aldored-landing) .navbar a:focus-visible { outline-color: #2196f3; }
+body:has(.aldored-landing) .navbar-sidebar .navbar__brand { color: var(--ar-ink); }
+body:has(.aldored-landing) .navbar-sidebar .navbar-login { color: var(--ar-stage); border-color: #bfc6cc; }
+body:has(.aldored-landing) .navbar a:focus-visible { outline-color: var(--ar-brand); }
 
 /* Login stays in the same tab, so an external-window icon is unnecessary. */
 .navbar-login svg { display: none; }

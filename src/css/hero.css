@@ -1,9 +1,9 @@
 .aldored-landing {
-  --brand: #2196f3;
-  --ink: #142b40;
-  --muted: #526477;
-  --wash: #edf6fd;
-  --line: #c9e2f6;
+  --brand: var(--ar-brand);
+  --ink: var(--ar-ink);
+  --muted: var(--ar-muted);
+  --wash: var(--ar-wash);
+  --line: var(--ar-line);
   color: var(--ink);
 }
 
@@ -23,7 +23,7 @@
 }
 
 .aldored-landing a:focus-visible {
-  outline: 3px solid #076bb9;
+  outline: 3px solid var(--ar-link);
   outline-offset: 5px;
 }
 
@@ -45,22 +45,17 @@
   text-decoration: none;
 }
 
-/* Darker brand blue keeps white labels readable on every primary action. */
+/* Brand blue takes dark labels: white on #0E9AFF stays below 3:1 (DESIGN.md). */
 .landing-button.landing-button-primary,
 .landing-button.landing-button-primary:visited {
-  background-color: #096bb0;
-  color: #ffffff;
+  background-color: var(--ar-brand);
+  color: var(--ar-on-brand);
 }
 
 .landing-button.landing-button-primary:hover,
 .landing-button.landing-button-primary:focus-visible {
-  background-color: #07558d;
-  color: #ffffff;
-}
-
-.landing-button.landing-button-primary:active {
-  background-color: #064570;
-  color: #ffffff;
+  background-color: var(--ar-brand-hover);
+  color: var(--ar-on-brand);
 }
 
 .landing-button-secondary {
@@ -86,7 +81,7 @@
   z-index: -1;
   inset: 0 0 auto;
   height: 410px;
-  background: #104a78;
+  background: var(--ar-stage);
   clip-path: ellipse(90% 100% at 50% 0%);
 }
 .hero-content {
@@ -149,13 +144,13 @@
 .solutions-panel-heading span {
   display: inline-block;
   padding: 0 8px 12px;
-  border-bottom: 2px solid #2196f3;
+  border-bottom: 2px solid var(--ar-brand);
 }
 .solutions-intro {
   padding: 18px 24px 4px;
   margin: 0;
   font-size: 14px;
-  color: #5b626a;
+  color: var(--ar-muted);
 }
 .solutions-list {
   padding: 0 12px 16px;
@@ -170,7 +165,7 @@
 }
 .solution-row:hover {
   color: var(--ink);
-  background: #edf6fd;
+  background: var(--ar-wash);
   text-decoration: none;
 }
 .solution-row-copy { min-width: 0; }
@@ -182,7 +177,7 @@
 }
 .solution-row-copy > span {
   display: block;
-  color: #626970;
+  color: var(--ar-muted);
   font-size: 13px;
   line-height: 1.5;
 }
@@ -197,14 +192,14 @@
   font-size: 14px;
   line-height: 1.65;
 }
-.solutions-panel-footer a { color: #096bb0; }
+.solutions-panel-footer a { color: var(--ar-link); }
 .solutions-panel-footer p { margin: 6px 0 0; }
 .aside-brand {
   display: grid;
   place-items: center;
   width: 24px;
   height: 24px;
-  background: #2196f3;
+  background: var(--ar-brand);
   color: #082940;
   border-radius: 6px;
   font-weight: 700;
@@ -225,7 +220,7 @@
   margin: 0 0 5px;
 }
 .hero-side-card p {
-  color: #626970;
+  color: var(--ar-muted);
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 16px;
@@ -241,8 +236,8 @@
   font-weight: 600;
 }
 .side-card-button:hover {
-  background: #edf6fd;
-  color: #104a78;
+  background: var(--ar-wash);
+  color: var(--ar-stage);
   text-decoration: none;
 }
 .side-card-icon {
@@ -252,8 +247,8 @@
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background: #edf6fd;
-  color: #0873c3;
+  background: var(--ar-wash);
+  color: var(--ar-brand);
 }
 .side-card-icon svg { width: 32px; height: 32px; }
 @media (max-width: 1050px) {

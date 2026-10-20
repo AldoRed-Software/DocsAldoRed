@@ -1,5 +1,5 @@
 .consulting-section {
-  background: #edf6fd;
+  background: var(--ar-wash);
   padding: 80px 32px;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .cta-section {
-  background: #123c60;
+  background: var(--ar-deep);
   padding: 84px 24px 90px;
 }
 

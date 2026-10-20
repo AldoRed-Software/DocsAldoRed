@@ -7,7 +7,7 @@
   height: 56px;
   border-radius: 12px;
   background: #f0f7fd;
-  color: #096bb0;
+  color: var(--ar-link);
 }
 .solution-logo img {
   display: block;
@@ -28,7 +28,7 @@
 }
 .solution-logo--code {
   color: #fff;
-  background: #104a78;
+  background: var(--ar-stage);
 }
 .solution-card > .solution-logo {
   margin-bottom: 24px;

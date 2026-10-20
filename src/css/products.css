@@ -50,7 +50,7 @@
   width: 48px;
   height: 48px;
   background: var(--wash);
-  color: #0873c3;
+  color: var(--ar-brand);
   border-radius: 12px;
   margin-bottom: 28px;
 }
@@ -88,7 +88,7 @@
 }
 
 .product-features li > span {
-  color: #096eb8;
+  color: var(--ar-link);
 }
 
 .product-link {
@@ -97,11 +97,11 @@
   gap: 14px;
   font-size: 14px;
   font-weight: 650;
-  color: #096bb0;
+  color: var(--ar-link);
 }
 
 .product-link:hover {
-  color: #074e81;
+  color: var(--ar-link-hover);
   text-decoration: underline;
 }
 
@@ -135,7 +135,7 @@
 
 .restaurant-copy > svg {
   flex-shrink: 0;
-  color: #0873c3;
+  color: var(--ar-brand);
 }
 
 .restaurant-copy h3 {
@@ -220,7 +220,7 @@
   gap: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #096bb0;
+  color: var(--ar-link);
 }
 .managed-service-copy h3 {
   font-size: 26px;
@@ -240,7 +240,7 @@
   font-size: 14px;
   line-height: 1.8;
 }
-.managed-service-copy li::marker { color: #096bb0; }
+.managed-service-copy li::marker { color: var(--ar-link); }
 .managed-service-plan {
   border-left: 1px solid var(--line);
   padding-left: 40px;
