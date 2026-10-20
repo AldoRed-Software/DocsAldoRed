@@ -1,109 +1,44 @@
 import React from "react";
-import { CommunityHighlights } from "@site/src/components/CommunityHighlights";
 import Link from "@docusaurus/Link";
-import {
-  SolutionIcon,
-  type SolutionKind,
-} from "@site/src/components/SolutionIcon";
 import "@site/src/css/hero.css";
-import { SolutionLogo } from "@site/src/components/SolutionLogo";
 
-const solutions: {
-  name: string;
-  description: string;
-  url: string;
-  icon: SolutionKind;
-}[] = [
-  {
-    name: "Fidato",
-    description: "Organiza la documentación de tus proyectos",
-    url: "/docs/fidato",
-    icon: "archive",
-  },
-  {
-    name: "Reservas AldoRed",
-    description: "Coordina salas, calendarios y reuniones",
-    url: "/docs/reservas",
-    icon: "calendar",
-  },
-  {
-    name: "API soluciones RPA",
-    description: "Automatiza la información del SII en tus sistemas",
-    url: "/docs/api-sii",
-    icon: "code",
-  },
-  {
-    name: "Administración tecnológica",
-    description:
-      "Tu nube y Google Workspace, en nuestras manos. Desde UF 1,72/mes",
-    url: "/docs/administracion-tecnologica",
-    icon: "cloud",
-  },
-  {
-    name: "Carta AldoRed",
-    description: "En construcción · Gestión de comandas para tu restaurante",
-    url: "/docs/carta",
-    icon: "menu",
-  },
-];
+function ArrowRight() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
 
 export const Hero = () => (
   <section className="hero-container" aria-labelledby="hero-heading">
-    <div className="hero-stage" aria-hidden="true" />
-    <div className="hero-content">
-      <header className="hero-copy">
-        <h1 className="hero-title" id="hero-heading">
-          Un mejor día de trabajo <br />
-          empieza con el software correcto.
-        </h1>
-        <p className="hero-subtitle">
-          Soluciones AldoRed para simplificar lo que haces cada día.
-        </p>
-      </header>
-
-      <div className="hero-panels">
-        <div className="solutions-column">
-          <h2 className="panel-label">
-            <SolutionIcon kind="layers" />
-            Nuestras soluciones
-          </h2>
-          <div className="solutions-panel">
-            <div className="solutions-panel-heading">
-              <span>Software y servicios para tu empresa</span>
-            </div>
-            <p className="solutions-intro">Encuentra tu punto de partida</p>
-            <div className="solutions-list">
-              {solutions.map((solution) => (
-                <Link
-                  to={solution.url}
-                  className="solution-row"
-                  key={solution.name}
-                >
-                  <SolutionLogo kind={solution.icon} />
-                  <span className="solution-row-copy">
-                    <strong>{solution.name}</strong>
-                    <span>{solution.description}</span>
-                  </span>
-                  <span className="solution-row-arrow" aria-hidden="true">
-                    →
-                  </span>
-                </Link>
-              ))}
-            </div>
-            <div className="solutions-panel-footer">
-              <a href="mailto:contacto@aldored.com">
-                ¿Necesitas una solución a medida? Conversemos.
-              </a>
-              <p>
-                Conoce cómo funcionan en nuestra{" "}
-                <Link to="/docs/intro">documentación</Link>.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <CommunityHighlights />
+    <div className="hero-copy">
+      <p className="landing-eyebrow">Software para empresas · Chile</p>
+      <h1 className="hero-title" id="hero-heading">
+        Software que simplifica tu día de trabajo.
+      </h1>
+      <p className="hero-subtitle">
+        Herramientas claras para documentos, reservas y automatización, y un
+        equipo que administra tu tecnología.
+      </p>
+      <div className="hero-actions">
+        <Link to="#soluciones" className="landing-button landing-button-primary">
+          Ver soluciones <ArrowRight />
+        </Link>
+        <a href="mailto:contacto@aldored.com" className="landing-underline">
+          contacto@aldored.com
+        </a>
       </div>
     </div>
+    <aside className="hero-highlight" aria-label="Servicio destacado">
+      <p className="hero-highlight-label">Administración tecnológica</p>
+      <p className="hero-highlight-price">
+        UF 1,72<span> /mes</span>
+      </p>
+      <p className="hero-highlight-copy">
+        Tu nube y Google Workspace, en nuestras manos.{" "}
+        <Link to="/docs/administracion-tecnologica">Conocer el servicio</Link>
+      </p>
+    </aside>
   </section>
 );

@@ -27,14 +27,16 @@ body,
   --ar-brand-hover: #0085e5;
   --ar-on-brand: #ffffff;
   --ar-ink: #142b40;
-  --ar-deep: #123c60;
-  --ar-stage: #104a78;
   --ar-wash: #edf6fd;
-  --ar-canvas: #f7fbfe;
   --ar-muted: #526477;
-  --ar-line: #c9e2f6;
   --ar-link: #096bb0;
   --ar-link-hover: #074e81;
+  --ar-night: #0b1f33;
+  --ar-surface: #f7fafc;
+  --ar-hairline: #e6edf3;
+  --ar-brand-tint: #eaf5ff;
+  --ar-font-mono: "Roboto Mono Variable", "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ifm-font-family-monospace: var(--ar-font-mono);
 
   /* Escala primaria derivada de #0E9AFF */
   --ifm-color-primary: #0e9aff;
@@ -58,20 +60,25 @@ body,
 
 /* Footer */
 .footer {
-  background-color: var(--ar-canvas) !important;
-  padding: 3rem 2rem 2rem;
-  border-top: 1px solid #e3edf4;
+  background-color: #fff !important;
+  padding: 3rem 32px 2rem;
+  border-top: 1px solid var(--ar-hairline);
 }
 
 .footer .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-inline: 0;
+}
+
+@media (max-width: 996px) {
+  .footer { padding-inline: var(--ifm-spacing-horizontal); }
 }
 
 .footer__title {
   color: var(--ar-ink) !important;
   font-size: 0.875rem !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   margin-bottom: 0.75rem;
 }
 
@@ -93,7 +100,7 @@ body,
   color: var(--ar-muted);
   font-size: 0.8125rem;
   margin-top: 2rem;
-  border-top: 1px solid #e3edf4;
+  border-top: 1px solid var(--ar-hairline);
   padding-top: 1.5rem;
   text-align: left;
 }

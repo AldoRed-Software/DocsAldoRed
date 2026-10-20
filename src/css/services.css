@@ -1,0 +1,85 @@
+.services-section {
+  background: var(--ar-surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.aldored-landing .services-section h2 {
+  max-width: 18ch;
+  margin-bottom: 48px;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  flex: 1 1 380px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: clamp(24px, 3vw, 40px);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.service-card-heading {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.aldored-landing .service-card h3 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -.015em;
+}
+
+.service-card-heading p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.service-card-heading strong {
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service-card-description {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.service-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.service-card li {
+  display: flex;
+  gap: 10px;
+}
+
+.service-card li::before {
+  content: "—";
+  color: var(--brand);
+}
+
+.service-card .landing-button {
+  margin-top: 8px;
+}

@@ -137,6 +137,7 @@ const config: Config = {
         theme: {
           customCss: [
             require.resolve("@fontsource-variable/roboto/index.css"),
+            require.resolve("@fontsource-variable/roboto-mono/index.css"),
             "./src/css/custom.css",
           ],
         },
@@ -160,10 +161,8 @@ const config: Config = {
       defaultMode: "light",
     },
     navbar: {
-      logo: {
-        alt: "AldoRed",
-        src: "img/aldored-wordmark.svg",
-      },
+      // Text wordmark styled in navbar.css: brand square + "AldoRed" in Roboto.
+      title: "AldoRed",
       items: [
         {
           label: "Login",
@@ -171,6 +170,12 @@ const config: Config = {
           target: "_self",
           position: "right",
           className: "navbar-login",
+        },
+        {
+          label: "Contacto",
+          to: "/#contacto",
+          position: "right",
+          className: "navbar-contact",
         },
         {
           label: "AldoRed, contigo",
@@ -220,33 +225,35 @@ const config: Config = {
       style: "light",
       links: [
         {
-          title: "Docs",
+          title: "Soluciones",
           items: [
-            {
-              label: "Bienvenida",
-              to: "/docs/intro",
-            },
-            {
-              label: "Educación",
-              to: "/docs/category/educación",
-            },
-            {
-              label: "AldoERP",
-              to: "/docs/category/aldoerp",
-            },
-            {
-              label: "API Reference",
-              to: "/api",
-            },
+            { label: "Fidato", to: "/docs/fidato" },
+            { label: "Reservas AldoRed", to: "/docs/reservas" },
+            { label: "API soluciones RPA", to: "/docs/api-sii" },
+            { label: "Carta AldoRed", to: "/docs/carta" },
           ],
         },
         {
-          title: "AldoRed",
+          title: "Servicios",
           items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/AldoRed-Software",
-            },
+            { label: "Administración tecnológica", to: "/docs/administracion-tecnologica" },
+            { label: "Asesorías y consultorías", to: "/docs/asesorias-consultorias" },
+          ],
+        },
+        {
+          title: "Recursos",
+          items: [
+            { label: "Documentación", to: "/docs/intro" },
+            { label: "API Reference", to: "/api" },
+            { label: "AldoRed, contigo", to: "/blog" },
+          ],
+        },
+        {
+          title: "Empresa",
+          items: [
+            { label: "Contacto", href: "mailto:contacto@aldored.com" },
+            { label: "GitHub", href: "https://github.com/AldoRed-Software" },
+            { label: "Login", href: "https://intranet.aldored.com" },
           ],
         },
       ],

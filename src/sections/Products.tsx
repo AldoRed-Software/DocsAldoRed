@@ -1,45 +1,44 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import useBrokenLinks from "@docusaurus/useBrokenLinks";
 import { SolutionIcon, type SolutionKind } from "@site/src/components/SolutionIcon";
 import "@site/src/css/products.css";
-import { SolutionLogo } from "@site/src/components/SolutionLogo";
 
-const products: { title: string; category: string; description: string; url: string; kind: SolutionKind; features: string[] }[] = [
-  { title: "Fidato", category: "Gestión documental", description: "Mantén la documentación de tus proyectos organizada y disponible para tu equipo en un solo lugar.", url: "/docs/fidato", kind: "archive", features: ["Documentos centralizados", "Acceso en la nube"] },
-  { title: "Reservas AldoRed", category: "Coordinación de equipos", description: "Gestiona salas y reuniones sin cruces de horarios, con calendarios y notificaciones conectados.", url: "/docs/reservas", kind: "calendar", features: ["Integración con Google Calendar", "Notificaciones por WhatsApp"] },
-  { title: "API soluciones RPA", category: "Automatización", description: "Integra la obtención de información del SII en tus sistemas y reduce las tareas manuales de tu operación.", url: "/docs/api-sii", kind: "code", features: ["Integración vía API", "Documentación para desarrolladores"] },
+const products: { title: string; category: string; description: string; url: string; kind: SolutionKind; cta: string }[] = [
+  { title: "Fidato", category: "Gestión documental", description: "La documentación de tus proyectos, ordenada y disponible para todo tu equipo.", url: "/docs/fidato", kind: "archive", cta: "Conocer Fidato" },
+  { title: "Reservas AldoRed", category: "Coordinación de equipos", description: "Salas y reuniones sin cruces de horario, conectadas a Google Calendar y WhatsApp.", url: "/docs/reservas", kind: "calendar", cta: "Conocer Reservas" },
+  { title: "API soluciones RPA", category: "Automatización", description: "Integra la información del SII en tus sistemas y elimina tareas manuales.", url: "/docs/api-sii", kind: "code", cta: "Ver la API" },
 ];
-export const Products = () => (
-  <section className="products-section" id="productos" aria-labelledby="products-heading">
-    <div className="products-container">
-      <div className="products-heading"><h2 id="products-heading">Descubre lo que puedes hacer.</h2><p>Conoce mejor nuestras herramientas y encuentra la solución para tu equipo.</p></div>
-      <article className="managed-service" aria-labelledby="managed-service-heading">
-        <div className="managed-service-copy">
-          <p className="managed-service-label"><SolutionIcon kind="cloud" /> Administración tecnológica</p>
-          <h3 id="managed-service-heading">Tú te ocupas de tu negocio. Nosotros, de la tecnología.</h3>
-          <p>Nos encargamos por completo de la administración tecnológica de tu software en la nube y de los correos de tu empresa en Google Workspace.</p>
-          <ul>
-            <li>Administración de software en la nube</li>
-            <li>Gestión de correos y cuentas de Google Workspace</li>
-            <li>Pagos automáticos mes a mes</li>
-          </ul>
-        </div>
-        <div className="managed-service-plan">
-          <p className="managed-service-price"><span>Desde</span><strong>UF 1,72<span>/mes</span></strong></p>
-          <p>Un servicio mensual para que puedas concentrarte en tu negocio.</p>
-          <Link to="/docs/administracion-tecnologica" className="landing-button landing-button-primary">Conocer el servicio</Link>
-        </div>
-      </article>
-      <div className="products-grid">
-        {products.map(product => <article className="solution-card" key={product.title}>
-          <SolutionLogo kind={product.kind} />
-          <p className="product-category">{product.category}</p>
-          <h3>{product.title}</h3><p className="product-description">{product.description}</p>
-          <ul className="product-features">{product.features.map(feature => <li key={feature}><span aria-hidden="true">✓</span>{feature}</li>)}</ul>
-          <Link to={product.url} className="product-link">Conocer {product.title}<span aria-hidden="true">↗</span></Link>
-        </article>)}
+
+export const Products = () => {
+  useBrokenLinks().collectAnchor("soluciones");
+  return (
+  <section className="products-section" id="soluciones" aria-labelledby="products-heading">
+    <div className="landing-container">
+      <div className="landing-section-heading">
+        <h2 id="products-heading">Nuestras soluciones</h2>
+        <p>Cada una resuelve una tarea concreta. Empieza por la que más tiempo te quita hoy.</p>
       </div>
-      <div className="restaurant-solution"><div className="restaurant-copy"><SolutionIcon kind="menu" /><div><h3>¿Tu negocio es un restaurante?</h3><p>Carta AldoRed está en construcción: una solución para gestionar comandas desde el celular y coordinar tu restaurante.</p></div></div><Link to="/docs/carta" className="product-link">Conocer Carta AldoRed <span aria-hidden="true">↗</span></Link></div>
+      <div className="products-grid">
+        {products.map(product => (
+          <article className="solution-card" key={product.title}>
+            <span className="solution-card-icon"><SolutionIcon kind={product.kind} /></span>
+            <p className="solution-card-category">{product.category}</p>
+            <h3>{product.title}</h3>
+            <p className="solution-card-description">{product.description}</p>
+            <Link to={product.url} className="landing-link">
+              {product.cta} <span aria-hidden="true">→</span>
+            </Link>
+          </article>
+        ))}
+      </div>
+      <Link to="/docs/carta" className="upcoming-solution">
+        <span className="landing-tag">En construcción</span>
+        <strong>Carta AldoRed</strong>
+        <span className="upcoming-solution-copy">Comandas desde el celular para coordinar tu restaurante.</span>
+        <span className="upcoming-solution-arrow" aria-hidden="true">→</span>
+      </Link>
     </div>
   </section>
 );
+};

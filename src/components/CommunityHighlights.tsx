@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import "@site/src/css/community.css";
 
 const stories = [
@@ -9,56 +8,38 @@ const stories = [
     description: "Acompañamos al equipo en Liga La Quinta como auspiciadores.",
     category: "Deporte y comunidad",
     url: "/blog/compania-de-maria-exalumnos",
-    image: "/img/comunidad/compania-de-maria-aldored.jpg",
-    alt: "Auspicio de AldoRed en la camiseta de Compañía de María Exalumnos",
-    className: "community-image-team",
   },
   {
     title: "Con 20s.cl, dentro y fuera de la tecnología",
     description: "Sponsors de su revista y responsables de administrar su tecnología.",
     category: "Colaboraciones",
     url: "/blog/colaboracion-20s",
-    image: "/img/clientes/logo-20s.png",
-    alt: "Logo de 20s",
-    className: "community-image-logo",
   },
 ];
 
-function CommunityArrow() {
-  return (
-    <svg className="community-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-      <path d="M5 12h14M12 5l7 7-7 7" />
-    </svg>
-  );
-}
-
-const StoryCard: React.FC<{ story: (typeof stories)[number] }> = ({ story }) => {
-  const imageUrl = useBaseUrl(story.image);
-  return (
-    <article className="community-card">
-      <Link to={story.url} className="community-card-link">
-        <img src={imageUrl} alt={story.alt} className={story.className} loading="lazy" />
-        <div className="community-card-copy">
-          <p className="community-category">{story.category}</p>
-          <h3>{story.title}</h3>
-          <p>{story.description}</p>
-          <span className="community-read">Leer historia <CommunityArrow /></span>
-        </div>
-      </Link>
-    </article>
-  );
-};
-
 export function CommunityHighlights() {
   return (
-    <aside className="hero-aside" aria-labelledby="community-heading">
-      <h2 className="panel-label" id="community-heading">
-        <Link to="/blog">AldoRed, contigo <CommunityArrow /></Link>
-      </h2>
-      <div className="community-stories">
-        {stories.map(story => <StoryCard key={story.url} story={story} />)}
+    <section className="community-section" aria-labelledby="community-heading">
+      <div className="landing-container">
+        <div className="landing-section-heading">
+          <h2 id="community-heading">AldoRed, contigo</h2>
+          <Link to="/blog" className="landing-link">Ver todas las historias <span aria-hidden="true">→</span></Link>
+        </div>
+        <ul className="community-stories">
+          {stories.map(story => (
+            <li key={story.url}>
+              <Link to={story.url} className="community-story">
+                <span className="community-category">{story.category}</span>
+                <div className="community-story-copy">
+                  <h3>{story.title}</h3>
+                  <p>{story.description}</p>
+                </div>
+                <span className="community-story-arrow" aria-hidden="true">→</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-      <Link to="/blog" className="community-all">Ver todas las historias</Link>
-    </aside>
+    </section>
   );
 }
