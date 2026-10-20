@@ -51,7 +51,7 @@ Cada producto aparece una sola vez. Los productos no se numeran: no representan 
 ## Componentes
 
 - Navegación: blanca en todo el sitio, con línea inferior de 1px; 80px en escritorio y 68px en móvil. "Contacto" es el único botón relleno.
-- Logo: cuadrado Brand de 12px y "AldoRed" en Roboto 700 a 20px, en texto real. Al cargar el sitio se reproduce una vez la intro de `static/img/aldored-logo-animado.svg`: letras blancas sobre un campo Brand que sale hacia la derecha y deja el nombre en Ink (1s, tras 0,7s).
+- Logo: solo "AldoRed" en Roboto 700, en texto real; 18px en escritorio y 15px en móvil, para caber en el cuadrado de la intro. Al cargar el sitio se reproduce una vez la intro de `static/img/aldored-logo-animado.svg`: letras blancas sobre un cuadrado Brand de la altura de la navbar menos 4px arriba y abajo (72px en escritorio, 60px en móvil), que sale hacia la derecha y deja el nombre en Ink (1s, tras 0,7s).
 - Acción principal: fondo Brand, texto blanco 700, radio 6px, altura 52px.
 - Acción secundaria: transparente, borde `#c5d3df` que pasa a Ink al hacer hover.
 - Tarjetas: borde Hairline de 1px, radio 12px, relleno 24–40px, sin sombra; el borde pasa a Brand en hover.
