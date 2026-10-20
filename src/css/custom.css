@@ -20,12 +20,12 @@ body,
   /* Layout y navbar */
   --ifm-container-width: 1200px;
   --ifm-navbar-height: 80px;
-  --ifm-font-family-base: "Avenir Next", Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ifm-font-family-base: "Roboto Variable", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --ifm-navbar-padding-horizontal: 1.5rem;
   /* Tokens de marca: la fuente de verdad es DESIGN.md. */
   --ar-brand: #0e9aff;
-  --ar-brand-hover: #3fb0ff;
-  --ar-on-brand: #082940;
+  --ar-brand-hover: #0085e5;
+  --ar-on-brand: #ffffff;
   --ar-ink: #142b40;
   --ar-deep: #123c60;
   --ar-stage: #104a78;

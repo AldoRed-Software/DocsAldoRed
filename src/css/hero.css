@@ -12,7 +12,7 @@
 }
 
 .aldored-landing h1, .aldored-landing h2, .aldored-landing h3 {
-  font-family: 'Avenir Next', Avenir, 'Century Gothic', sans-serif;
+  font-family: var(--ifm-font-family-base);
   color: var(--ink);
 }
 
@@ -45,11 +45,13 @@
   text-decoration: none;
 }
 
-/* Brand blue takes dark labels: white on #0E9AFF stays below 3:1 (DESIGN.md). */
+/* White on #0E9AFF is just under 3:1, so labels are large and bold. */
 .landing-button.landing-button-primary,
 .landing-button.landing-button-primary:visited {
   background-color: var(--ar-brand);
   color: var(--ar-on-brand);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .landing-button.landing-button-primary:hover,
@@ -81,7 +83,7 @@
   z-index: -1;
   inset: 0 0 auto;
   height: 410px;
-  background: var(--ar-stage);
+  background: var(--ar-brand);
   clip-path: ellipse(90% 100% at 50% 0%);
 }
 .hero-content {
@@ -95,14 +97,15 @@
 .aldored-landing .hero-title {
   color: #fff;
   font-size: clamp(32px, 3.6vw, 48px);
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -.035em;
   margin: 0 0 18px;
 }
 .hero-subtitle {
-  color: #e2f1fc;
+  color: #fff;
   font-size: 18px;
+  font-weight: 500;
   line-height: 1.6;
   margin: 0;
 }
@@ -118,7 +121,7 @@
   gap: 10px;
   color: #fff;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 24px;
   letter-spacing: 0;
   margin: 0 0 16px;

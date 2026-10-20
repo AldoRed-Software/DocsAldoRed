@@ -56,7 +56,7 @@ const config: Config = {
           hideDownloadButton: false,
           customCss: `
             .scalar-app {
-              --scalar-font: 'Inter', sans-serif;
+              --scalar-font: 'Roboto Variable', Roboto, sans-serif;
             }
             .scalar-api-client__send-button {
               display: none !important;
@@ -135,7 +135,10 @@ const config: Config = {
           showReadingTime: true,
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: [
+            require.resolve("@fontsource-variable/roboto/index.css"),
+            "./src/css/custom.css",
+          ],
         },
       } satisfies Preset.Options,
     ],

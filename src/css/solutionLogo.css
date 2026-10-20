@@ -15,7 +15,6 @@
   height: 56px;
   object-fit: contain;
 }
-.solution-logo--folder,
 .solution-logo--calendar {
   background: transparent;
 }
@@ -25,6 +24,10 @@
   height: 30px;
   flex-shrink: 0;
   stroke-width: 1.8;
+}
+.solution-logo--archive {
+  color: #fff;
+  background: var(--ar-brand);
 }
 .solution-logo--code {
   color: #fff;

@@ -18,7 +18,7 @@ const solutions: {
     name: "Fidato",
     description: "Organiza la documentación de tus proyectos",
     url: "/docs/fidato",
-    icon: "folder",
+    icon: "archive",
   },
   {
     name: "Reservas AldoRed",

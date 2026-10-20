@@ -150,27 +150,31 @@
 
 /* Landing navigation shares the hero stage; documentation keeps its light header. */
 body:has(.aldored-landing) .navbar {
-  background: var(--ar-stage);
-  --ifm-navbar-background-color: var(--ar-stage);
+  background: var(--ar-brand);
+  --ifm-navbar-background-color: var(--ar-brand);
   --ifm-navbar-link-color: #fff;
-  --ifm-navbar-link-hover-color: #cce7fc;
+  --ifm-navbar-link-hover-color: var(--ar-ink);
   box-shadow: none;
 }
 body:has(.aldored-landing) .navbar__brand,
 body:has(.aldored-landing) .navbar__link,
 body:has(.aldored-landing) .navbar__toggle { color: #fff; }
+/* White on #0E9AFF is below 3:1, so landing links use a heavier weight. */
+body:has(.aldored-landing) .navbar__link { font-weight: 700; }
 body:has(.aldored-landing) .navbar-login {
   background: transparent;
   color: #fff;
-  border-color: rgba(255, 255, 255, .55);
+  border-color: rgba(255, 255, 255, .85);
+  font-weight: 700;
 }
 body:has(.aldored-landing) .navbar-login:hover {
-  background: rgba(255, 255, 255, .1);
+  background: #fff;
   border-color: #fff;
+  color: var(--ar-ink);
 }
 body:has(.aldored-landing) .navbar-sidebar .navbar__brand { color: var(--ar-ink); }
 body:has(.aldored-landing) .navbar-sidebar .navbar-login { color: var(--ar-stage); border-color: #bfc6cc; }
-body:has(.aldored-landing) .navbar a:focus-visible { outline-color: var(--ar-brand); }
+body:has(.aldored-landing) .navbar a:focus-visible { outline-color: #fff; }
 
 /* Login stays in the same tab, so an external-window icon is unnecessary. */
 .navbar-login svg { display: none; }

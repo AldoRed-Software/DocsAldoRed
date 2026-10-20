@@ -4,7 +4,6 @@ import { SolutionIcon, type SolutionKind } from "./SolutionIcon";
 import "@site/src/css/solutionLogo.css";
 
 const productLogos: Partial<Record<SolutionKind, string>> = {
-  folder: "/img/logo-AldoERP-gbfree.webp",
   calendar: "/img/logoReservas.png",
 };
 

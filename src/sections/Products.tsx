@@ -5,7 +5,7 @@ import "@site/src/css/products.css";
 import { SolutionLogo } from "@site/src/components/SolutionLogo";
 
 const products: { title: string; category: string; description: string; url: string; kind: SolutionKind; features: string[] }[] = [
-  { title: "Fidato", category: "Gestión documental", description: "Mantén la documentación de tus proyectos organizada y disponible para tu equipo en un solo lugar.", url: "/docs/fidato", kind: "folder", features: ["Documentos centralizados", "Acceso en la nube"] },
+  { title: "Fidato", category: "Gestión documental", description: "Mantén la documentación de tus proyectos organizada y disponible para tu equipo en un solo lugar.", url: "/docs/fidato", kind: "archive", features: ["Documentos centralizados", "Acceso en la nube"] },
   { title: "Reservas AldoRed", category: "Coordinación de equipos", description: "Gestiona salas y reuniones sin cruces de horarios, con calendarios y notificaciones conectados.", url: "/docs/reservas", kind: "calendar", features: ["Integración con Google Calendar", "Notificaciones por WhatsApp"] },
   { title: "API soluciones RPA", category: "Automatización", description: "Integra la obtención de información del SII en tus sistemas y reduce las tareas manuales de tu operación.", url: "/docs/api-sii", kind: "code", features: ["Integración vía API", "Documentación para desarrolladores"] },
 ];

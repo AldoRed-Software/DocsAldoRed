@@ -20,12 +20,12 @@ Una empresa de software cercana y seria. Presentar con claridad qué resuelve ca
 | Line        | `#c9e2f6` | Bordes de tarjetas                                   |
 | Link        | `#096bb0` | Enlaces de texto sobre fondos claros                 |
 
-El azul principal sustituye al morado de Slack. Utilizar azul oscuro para las grandes superficies invertidas. Los botones #0E9AFF llevan texto #082940 para mantener contraste legible; no usar texto blanco pequeño sobre este azul. No usar degradados ni sombras de texto.
+El azul principal sustituye al morado de Slack. La navegación y el fondo curvo del hero de la landing usan #0E9AFF; las franjas de contacto siguen en azul oscuro. El texto blanco sobre #0E9AFF queda cerca de 3:1, por eso va siempre grueso (700) y en botones a 18px; no usar texto blanco fino ni pequeño sobre este azul. No usar degradados ni sombras de texto.
 
 ## Tipografía
 
-- Títulos: Avenir Next, Avenir, Century Gothic, sans-serif. Geométrica, con peso 600–650.
-- Cuerpo: Avenir Next, Avenir y fuentes del sistema. Sin descargas externas de tipografía.
+- Títulos: Roboto, con peso 600–700.
+- Cuerpo: Roboto y fuentes del sistema como respaldo. Roboto se sirve desde el propio sitio (`@fontsource-variable/roboto`); sin descargas externas de tipografía.
 - Hero: 32–48px, centrado; interlineado 1.15.
 - Títulos de sección: 32–48px; interlineado 1.15.
 - Cuerpo: 16–18px; interlineado 1.65–1.75; líneas inferiores a 80 caracteres.
@@ -49,7 +49,7 @@ La pieza visual distintiva es el panel de soluciones que se superpone al fondo c
 
 ## Componentes
 
-- Navegación: azul oscuro en la landing y blanca en documentación; 80px en escritorio y 68px en móvil.
+- Navegación: #0E9AFF en la landing y blanca en documentación; 80px en escritorio y 68px en móvil.
 - Acciones principales: rectangulares, radio 4px, altura mínima 54px.
 - Acción secundaria: fondo transparente y borde azul grisáceo.
 - Tarjetas: radio 16px, borde 1px y relleno 24–30px; sin sombras.
@@ -64,6 +64,6 @@ Columnas apiladas en pantallas pequeñas. Enlaces con destino real, foco visible
 
 ## Referencia prioritaria: captura de Slack
 
-La composición sigue la captura compartida: navegación integrada en un escenario azul oscuro `#104a78`, titular centrado, curva elíptica inferior y paneles blancos superpuestos. El panel principal ocupa dos tercios del ancho y presenta cuatro soluciones en filas; a su derecha, dos tarjetas de contacto y asesoría. Después aparece una sección compacta de descubrimiento.
+La composición sigue la captura compartida: navegación integrada en un escenario azul de marca `#0E9AFF`, titular centrado, curva elíptica inferior y paneles blancos superpuestos. El panel principal ocupa dos tercios del ancho y presenta cuatro soluciones en filas; a su derecha, dos tarjetas de contacto y asesoría. Después aparece una sección compacta de descubrimiento.
 
-El azul de marca sigue siendo `#0E9AFF`, presente en iconos, acentos y acciones. La superficie oscura es una variante de apoyo para que el texto blanco sea legible. Esta composición sustituye al hero dividido y al mapa de soluciones de la primera propuesta. Los paneles superpuestos usan sombra suave como en la captura. En móvil se apilan y mantienen todos los enlaces accesibles.
+El azul de marca sigue siendo `#0E9AFF`, presente en iconos, acentos y acciones. Fidato se representa con un icono de archivador sobre fondo de marca, sin mascota. Esta composición sustituye al hero dividido y al mapa de soluciones de la primera propuesta. Los paneles superpuestos usan sombra suave como en la captura. En móvil se apilan y mantienen todos los enlaces accesibles.
