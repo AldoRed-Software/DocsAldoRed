@@ -1,6 +1,6 @@
 # AldoRed — Guía de diseño
 
-Adaptación de la referencia visual de Slack a la identidad de AldoRed. El color principal es **#2196f3**. La referencia aporta tipografía amplia, espacio generoso, tarjetas discretas y alternancia de superficies claras con franjas oscuras. El contenido y los elementos visuales corresponden a AldoRed.
+Adaptación de la referencia visual de Slack a la identidad de AldoRed. El color principal es **#0E9AFF**. La referencia aporta tipografía amplia, espacio generoso, tarjetas discretas y alternancia de superficies claras con franjas oscuras. El contenido y los elementos visuales corresponden a AldoRed.
 
 ## Dirección
 
@@ -10,7 +10,7 @@ Una empresa de software cercana y seria. Presentar con claridad qué resuelve ca
 
 | Token       | Valor     | Uso                                                  |
 | ----------- | --------- | ---------------------------------------------------- |
-| Brand       | `#2196f3` | Acciones principales, símbolo de marca y acentos     |
+| Brand       | `#0E9AFF` | Acciones principales, símbolo de marca y acentos     |
 | Ink         | `#142b40` | Títulos y texto principal                            |
 | Deep blue   | `#123c60` | Franjas invertidas y cabecera del mapa de soluciones |
 | Wash        | `#edf6fd` | Superficies secundarias e iconos                     |
@@ -20,7 +20,7 @@ Una empresa de software cercana y seria. Presentar con claridad qué resuelve ca
 | Line        | `#c9e2f6` | Bordes de tarjetas                                   |
 | Link        | `#096bb0` | Enlaces de texto sobre fondos claros                 |
 
-El azul principal sustituye al morado de Slack. Utilizar azul oscuro para las grandes superficies invertidas. Los botones #2196f3 llevan texto #082940 para mantener contraste legible; no usar texto blanco pequeño sobre este azul. No usar degradados ni sombras de texto.
+El azul principal sustituye al morado de Slack. Utilizar azul oscuro para las grandes superficies invertidas. Los botones #0E9AFF llevan texto #082940 para mantener contraste legible; no usar texto blanco pequeño sobre este azul. No usar degradados ni sombras de texto.
 
 ## Tipografía
 
