@@ -51,6 +51,7 @@ Cada producto aparece una sola vez. Los productos no se numeran: no representan 
 ## Componentes
 
 - Navegación: blanca en todo el sitio, con línea inferior de 1px; 80px en escritorio y 68px en móvil. "Contacto" es el único botón relleno.
+- Logo: cuadrado Brand de 12px y "AldoRed" en Roboto 700 a 20px, en texto real. Al cargar el sitio se reproduce una vez la intro de `static/img/aldored-logo-animado.svg`: letras blancas sobre un campo Brand que sale hacia la derecha y deja el nombre en Ink (1s, tras 0,7s).
 - Acción principal: fondo Brand, texto blanco 700, radio 6px, altura 52px.
 - Acción secundaria: transparente, borde `#c5d3df` que pasa a Ink al hacer hover.
 - Tarjetas: borde Hairline de 1px, radio 12px, relleno 24–40px, sin sombra; el borde pasa a Brand en hover.
@@ -61,4 +62,4 @@ Cada producto aparece una sola vez. Los productos no se numeran: no representan 
 
 ## Adaptación y accesibilidad
 
-Columnas que se apilan con flex-wrap en pantallas pequeñas. Enlaces con destino real, foco visible y encabezados jerárquicos. Respetar `prefers-reduced-motion`. Sin carruseles ni animaciones automáticas. Los estilos de contenido de la landing se delimitan con `.aldored-landing`; navegación y pie son compartidos con documentación y blog.
+Columnas que se apilan con flex-wrap en pantallas pequeñas. Enlaces con destino real, foco visible y encabezados jerárquicos. Respetar `prefers-reduced-motion`. Sin carruseles ni animaciones automáticas, salvo la intro del logo, que dura un segundo y no se repite. Los estilos de contenido de la landing se delimitan con `.aldored-landing`; navegación y pie son compartidos con documentación y blog.

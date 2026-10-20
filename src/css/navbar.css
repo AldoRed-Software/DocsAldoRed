@@ -22,6 +22,10 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  /* Padding gives the intro field room; the negative margin keeps the edge aligned. */
+  margin-left: -10px;
+  padding: 4px 10px;
+  border-radius: 6px;
   color: var(--ar-ink);
   font-size: 20px;
   font-weight: 700;
@@ -34,6 +38,41 @@
   height: 12px;
   border-radius: 3px;
   background: var(--ar-brand);
+}
+
+/*
+ * Intro (static/img/aldored-logo-animado.svg in CSS): white letters on a #0E9AFF field;
+ * the field slides out to the right and each letter turns ink as its edge passes.
+ * Both layers share one box and one background-position, so the edges stay in sync.
+ */
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .navbar .navbar__title {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image:
+      linear-gradient(90deg, var(--ar-ink) 50%, #fff 50%),
+      linear-gradient(90deg, transparent 50%, var(--ar-brand) 50%);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    animation: aldored-logo-intro 1s cubic-bezier(.65, 0, .35, 1) .7s both;
+  }
+}
+
+@keyframes aldored-logo-intro {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+
+/* The mobile drawer remounts the brand on open; only the page header plays the intro. */
+.navbar-sidebar .navbar__title {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar .navbar__title { animation: none; }
 }
 
 .navbar__link {
