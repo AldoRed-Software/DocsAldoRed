@@ -63,3 +63,22 @@ Cada producto aparece una sola vez. Los productos no se numeran: no representan 
 ## Adaptación y accesibilidad
 
 Columnas que se apilan con flex-wrap en pantallas pequeñas. Enlaces con destino real, foco visible y encabezados jerárquicos. Respetar `prefers-reduced-motion`. Sin carruseles ni animaciones automáticas, salvo la intro del logo, que dura un segundo y no se repite. Los estilos de contenido de la landing se delimitan con `.aldored-landing`; navegación y pie son compartidos con documentación y blog.
+
+## Documentación
+
+Las rutas de documentación usan `src/css/docs.css`, delimitado por `.docs-wrapper`.
+La referencia editorial es el artículo «Presentando el MCP de Fintoc»: títulos
+amplios, cuerpo de lectura contenido y navegación secundaria discreta. Se mantiene
+la paleta y la tipografía local de AldoRed.
+
+- Blanco `#ffffff` como fondo; Ink `#142b40` para títulos; cuerpo `#35485a`;
+  Muted `#526477` para navegación e introducciones; Hairline `#e6edf3` para divisiones;
+  Link `#096bb0` para enlaces y selección.
+- Roboto para lectura y títulos; Roboto Mono para breadcrumbs y código.
+- Tres columnas en escritorio: índice de documentos de 250px, artículo de hasta
+  720px y tabla de contenidos. Título alineado a la izquierda de 36–56px,
+  peso 450, tracking -0.04em; cuerpo de 16px e interlineado 1.85.
+- En móvil se conserva el menú de Docusaurus y la tabla de contenidos desplegable;
+  el artículo ocupa el ancho disponible con márgenes laterales de 18–24px.
+- La jerarquía depende de tipografía y espacio. No se añaden imágenes, autores
+  ni fechas artificiales a documentos técnicos. La landing mantiene su composición.

@@ -6,6 +6,7 @@
 /* Importar estilos del navbar */
 @import url("./navbar.css");
 @import url("./community.css");
+@import url("./docs.css");
 
 html {
   background-color: #ffffff;
